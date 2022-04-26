@@ -1,0 +1,518 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{rotating}
+\usepackage[natbibapa]{apacite}
+\bibliographystyle{apacite}
+\usepackage{siunitx}
+\usepackage{multirow}
+\usepackage{arydshln}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{tikzsymbols}
+\usetikzlibrary{shapes}
+\usetikzlibrary{trees}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{arrows,shapes,positioning,fit,arrows.meta}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usepackage{enumitem}
+\title{\textsf{R} code for examining UK and Portugal Vaccine Hesitancy}
+\author{DBW}
+\begin{document}
+\maketitle
+\section{Background information}
+This file was created using \textbf{knitr} \citep{knitr}, combining \LaTeX{} and \textsf{R} code. You are likely looking at the resulting \textsf{pdf}, but the code used to create this file is also available as a \textsf{.Rnw}, which would allow you copy and paste the code more easily. This file is available at \url{https://github.com/dbrookswr/BAwork/ukportRcode.Rnw}. The \textsf{R} session information, at the start of these analyses, is:
+
+<<>>=
+sessionInfo()
+@
+
+A few approaches were examined for aggregating information. These were discussed among the authors and also with Harsha Perera (at Amazon) and Sarah Wolf{}f (at UNLV). We use the sum of scores (applying reverse scoring based on the papers that produced these scales), standard CFA where we do not allow cross loadings between the scales, and exploratory CFA, which does allow non-zero cross loadings. Thanks to Harsha Perera for educating us about this procedure. Valuable references include:  \citep{MarshEA2009,MarshEA2020,MorinEA2013,TothKiralyEA2017}. The steps in \url{https://msilvestrin.me/post/esemcomp/} are followed and the \textbf{esemComp} package \citep{esemComp} used. This package relies on the package \textbf{lavaan} package \citep{lavaan}.
+
+\section{Loading packages and Reading data}
+The following \textsf{R} packages are loaded. Install them if necessary.
+<<loadpackages,message=FALSE,warning=FALSE>>=
+library(semPlot) #semPaths
+library(GPArotation) #req for semPlot
+#if not already installed
+#devtools::install_github("MateusPsi/esemComp")
+library(esemComp) #esem
+library(lavaan) #cfa
+library(foreign) #read.spss
+library(xtable) #xtable
+library(psych) #fa.parallel
+library(Matrix) #rankMatrix
+@
+
+\noindent The \textsf{SPSS} data read are those archived elsewhere. They were placed on DBW's hard drive to allow analyses to be completed even with internet access difficulties. Two data objects are created, one with the labels in order to check what the values correspond to.
+<<readdata,warning=FALSE,message=FALSE,size="small">>=
+fname <-  "C:\\Users\\dbroo\\OneDrive\\Documents\\Covid\\Attitudes towards minority groups.sav"
+att <- read.spss(fname,to.data.frame=TRUE,use.value.labels=FALSE)
+attlabels <- read.spss(fname,to.data.frame=TRUE,use.value.labels=TRUE)
+@
+
+\noindent Here are all the variable names. The file (without value labels) is attached.
+<<size="footnotesize">>=
+options(width=120)
+names(att)
+options(width=80)
+attach(att)
+@
+
+\noindent It is often useful to create objects comprising the items for each of the ``scales.'' I have not reverse coded items. The number of reversed items is too small to include a methods construct for these when doing the estimation. Not all these are used. 
+<<createsets>>=
+eth <- cbind(ethnicity1,ethnicity2,ethnicity3,ethnicity4,ethnicity5,ethnicity6)
+rel <- cbind(religion1,religion2,religion3,religion4,religion5,religion6)
+disc <- cbind(discrim1,discrim2,discrim3,discrim4,discrim5,discrim6,
+              discrim7,discrim8,discrim9)
+threat <- cbind(threat1,threat2,threat3,threat4)
+brit <- cbind(british1,british2,british3,british4,british5,british6,british7)
+lsat <- cbind(lifesat1,lifesat2,lifesat3,lifesat4,lifesat5)
+scales <- list(eth,rel,disc,threat,brit,lsat) 
+scalevars <- matrix(unlist(scales),nrow=nrow(att))
+@
+
+\section{Exploring Associations with Scales}
+
+One way to explore the associations within a scale is it scree plot. Here are some basic scree plots. The plots are shown in Figure~1 show that the scales all appear uni-dimensional. This means that the bias using just the mean or sum (after reverse coding) responses should not be large. Other screes and correlation matrices are produced below.
+<<scalesscree,fig.cap="Scree plots for the scales.",fig.width=5.7*1.1,out.width="5.7in",fig.height=4.0*1.1,out.height="4in",fig.align="center",fig.lp="fig:scalesscree">>=
+makescree <- function(x) {
+  nn <- colnames(scales[[i]])[1]
+  plotname <- substr(nn,1,nchar(nn)-1)
+  plot(1:ncol(x),eigen(cor(x))$values,las=1,
+       xlab="No. components",type="b",
+       ylab="eigenvalue")
+  mtext(plotname,3,line=.5)}
+par(mfrow=c(2,3))
+for (i in seq_along(scales))
+  makescree(scales[[i]])
+@
+
+
+\clearpage
+\section{Exploring Research Questions}
+These are not done in the same order as the paper.
+
+\subsection{The relationship between \texttt{threat} and \texttt{brit}}
+The first step  relationship between \texttt{threat} and \texttt{brit} is looking at the associations between the items in Table~\ref{tab:corrrq6}. The cross-loadings, in the lower left corner, are low.
+<<corrrq6,results='asis'>>=
+xtab <- cor(cbind(threat,brit))
+xtab <- matrix(sub("0.",".",sprintf("%0.2f",xtab)),ncol=ncol(xtab))
+xtab[upper.tri(xtab,diag=TRUE)] <- NA
+rownames(xtab) <- c(colnames(threat),colnames(brit))
+print(xtable(xtab[1:nrow(xtab),1:(ncol(xtab)-1)],label="tab:corrrq6",
+             caption="Correlations between \\texttt{threat} 
+             and \\texttt{brit} items."),
+      size="small",hline.after=c(0,ncol(threat),nrow(xtab)))
+@
+
+Here are the EFA loadings for these scales together:
+<<>>=
+print(
+  factanal(cbind(threat,brit),2,rotation="varimax")$loadings,
+         cutoff=0)
+@
+
+
+There are several methods for comparing the associations among these two sets of items (e.g., canonical correlation). The simplest is the Pearson correlation between the mean or sum (none of the items in these scales required reverse scoring) of them. 
+
+<<>>=
+cor.test(rowMeans(threat),rowMeans(brit))
+@
+
+The next approach is traditional CFA using the \texttt{cfa} function from \textbf{lavaan} \citep{lavaan}. The correlation of the estimated latent variables is near that of the mean for the scales, and this is expected at the loadings from the latent variables onto the items are all similar.
+
+<<>>=
+mod1 <- 
+  'threat =~ threat1 + threat2 + threat3 + threat4
+   brit =~ british1 + british2 + british3 + 
+       british4 + british5 + british6 + british7'
+fit1 <- cfa(mod1,data=att)
+lv1 <- predict(fit1)
+cor.test(lv1[,1],lv1[,2])
+@
+
+The ESEM-CFA approaches were used, in part, to evaluate the procedure. There is debate on how to get the initial loadings, but the target rotation matrix seems what more agree on. You enter a matrix that shows what is not estimated from the usually CFA (i.e., zeroes on the cross-loadings), but then the algorithm relaxes this (\texttt{make\_target} is part of \textbf{esemComp}). The loadings on the appropriate factor are slightly higher than for an EFA and for the inappropriate factor are slightly lower. Importantly, it allows them to be non-zero. A clear disadvantage of this approach is that many readers will not know the procedure. However, including it here in the technical report allows people in the future to evaluate it. A second disadvantage of this procedure is that because it is newer and less used than traditional CFA, there is less consensus on the specific algorithms. 
+
+<<>>=
+twosets <- cbind(brit,threat)
+tar <- make_target(ncol(twosets),
+  mainloadings = list(br = 1:ncol(brit),thr = (1+ncol(brit)):ncol(twosets)))
+
+esemefa <- esem_efa(twosets,2,target=tar,fm='ml')
+esemefa$loadings
+@
+
+
+<<>>=
+ref <- find_referents(esemefa,factor_names = c("br","thr"))
+mod2 <- syntax_composer(esemefa, ref)
+fit2 <- cfa(mod2,twosets,std.lv=TRUE)
+
+summary(fit2)
+lv2 <- predict(fit2)
+cor.test(lv2[,1],lv2[,2])
+cor(cbind(lv1,lv2))
+@
+
+The following produces the default path models. 
+<<>>=
+semPaths(fit1,'std',thresholdSize=0)
+semPaths(fit2,'std',thresholdSize=0)
+@
+
+
+\subsection{Ethnic differences for discrimination, discrimination-related identity threat, ethnic identification, and British national identification}
+There may be cross-loadings among any of these and there are arguments that all the constructs could be placed together. As the screes show, within each scale the items correlate, but this does not mean that items from other scales are not influenced by these constructs. 
+
+\clearpage
+\subsection{All items}
+ The correlations of all items are printed for those with good eyesight in Table~\ref{tab:allcorrs}. 
+ 
+ \renewcommand{\tabcolsep}{1pt}
+ <<tab:allcorrs,results='asis'>>=
+tabcor <- corvars <- cor(matrix(unlist(scales),nrow=nrow(att)))
+tabcor <- matrix(sub("0.",".",sprintf("%0.2f",tabcor)),nrow=nrow(tabcor))
+tabcor[upper.tri(tabcor,diag=TRUE)] <- NA
+rownames(tabcor) <- rownames(corvars) <- colnames(corvars) <- colnames(scalevars) <-
+    c(names(scales[[1]][1,]),names(scales[[2]][1,]),names(scales[[3]][1,]),
+      names(scales[[4]][1,]),names(scales[[5]][1,]),names(scales[[6]][1,]))
+print(xtable(tabcor,
+             caption="Correlations of all scale items.",
+             label="tab:allcorrs1"),
+             hline.after=c(0,6,12,21,25,32,37),
+             size="scriptsize",floating = TRUE,floating.environment = "sidewaystable")
+@
+
+%returning to the default column separation
+\renewcommand{\tabcolsep}{2pt}
+\clearpage
+
+What is the scree like for this correlation matrix? See Figure~\ref{fig:screetogether}. Around-ish six, two, nine looks okay-ish. This shows these constructs are associated.
+
+<<screetogether,fig.cap="Scree plot for ALL the scales together.",fig.width=5.7*1.1,out.width="5.7in",fig.height=3.5*1.1,out.height="3.5in",fig.align="center",fig.lp="fig:screetogether">>=
+fa.parallel(corvars,n.obs=nrow(att),ylab="eigenvalue")
+abline(v=length(scales))
+@
+
+The loadings show most factors load most highly on one set of items, but that is what varimax does.
+
+<<size="small">>=
+#rankMatrix(corvars)
+# should up singular with the correlation matrix
+efa1 <- factanal(scalevars,6,rotation="varimax")
+options(width=120)
+print(efa1$loadings,cutoff=0)
+options(width=80)
+@
+
+I will focus on comparing the results from the CFA with the ESEM-CFA, which essentially just allows some cross-construct loadings.
+
+\subsection{CFA LVs}
+
+The model is long.
+
+<<size="small">>=
+options(width=120)
+mod2 <- 
+  'eth =~ ethnicity1 + ethnicity2 + ethnicity3 + ethnicity4 + ethnicity5 + ethnicity6
+   rel =~ religion1 + religion2 + religion3 + religion4 + religion5 + religion6
+   disc =~ discrim1 + discrim2 + discrim3 + discrim4 + discrim5 + discrim6 +
+              discrim7 + discrim8 + discrim9
+   threat =~ threat1 + threat2 + threat3 + threat4
+   brit =~ british1 + british2 + british3 + british4 + british5 + british6 + british7
+   lsat =~ lifesat1 + lifesat2 + lifesat3 + lifesat4 + lifesat5'
+@
+
+<<results='asis'>>=
+fitallcfa <- cfa(mod2,data=att)
+lvallcfa <- predict(fitallcfa)
+cortab <- matrix(sub("0.",".",
+  sprintf("%0.2f",cor(lvallcfa))),nrow=length(scales))
+cortab[upper.tri(cortab,diag=TRUE)] <- NA
+# Simpler to have written out (eth,rel,disc,threat,brit,lsat)
+rownames(cortab) <- fitallcfa@Model@dimNames[[1]][2][[1]]
+xtable(cortab,caption="Correlations between LVs from CFA.")
+#semPaths(fitallcfa) 
+@
+
+\subsection{All constructs with ESEM-CFA}
+
+<<>>=
+tarall <- make_target(ncol(scalevars),
+  mainloadings = list(disc=13:21,rel=7:12,brit=26:32,eth=1:6,
+      lsat=32:37,threat=22:25))
+esemefaall <- esem_efa(scalevars,6,target=tarall,fm='ml')
+## need to check which Fs correspond with which
+esemefaall$loadings
+#name order based on EFA
+refall <- find_referents(esemefaall,
+    factor_names = c("disc","rel","brit","eth","lsat","threat")) 
+modallesem <- syntax_composer(esemefaall, refall)
+#writeLines(modallesem)
+
+fitallesem <- cfa(modallesem,scalevars,std.lv=TRUE)
+@
+
+<<size="small">>=
+options(width=120)
+summary(fitallesem)
+lvallesem <- predict(fitallesem)
+cortab <- cor(lvallesem)
+cortab <- matrix(sub("0.",".",sprintf("%0.2f",cortab)),nrow=nrow(cortab))
+rownames(cortab) <- colnames(lvallesem)
+cortab[upper.tri(cortab,diag=TRUE)] <- NA
+options(width=80)
+@
+<<results='asis'>>=
+xtable(cortab,caption="Correlations from ESEM LVs")
+@
+
+\section{Adding up for construct estimates}
+The following variables (\texttt{"ETHNICITYSUM" "RELIGIONSUM" "DISCRIMINATIONSUM" "IDENTITYTHREATSUM" "BRITISHNESSSUM" "LIFESATISFACTIONSUM" }) are the sums of the items for each construct, with reverse scoring used where appropriate. 
+
+<<>>=
+lvsums <- cbind(ETHNICITYSUM, RELIGIONSUM, DISCRIMINATIONSUM, 
+      IDENTITYTHREATSUM,BRITISHNESSSUM,LIFESATISFACTIONSUM)
+
+cortab <- cor(lvsums)
+cortab <- matrix(sub("0.",".",sprintf("%0.2f",cortab)),nrow=nrow(cortab))
+rownames(cortab) <- colnames(lvsums)
+colnames(lvsums)
+lvsums[1,]
+cortab[upper.tri(cortab,diag=TRUE)] <- NA
+@
+<<results='asis'>>=
+xtable(cortab,caption="Correlations from sum of items for construct estimates.")
+@
+
+\clearpage
+\section{Now answering the research questions}
+The research questions refer to an early ordering of these. They are paraphrased here.
+
+\subsection{RQ 1}	 The $t$ will be positive since Black has the lower value for discrimination, identity threat, and ethnic identification and negative for British national identification. Note that the sign refers to the final test with the sums. The latent variables may be estimated in the opposite direction (they aren't here). The results are not exactly as predicted. Discrimination in the correct direction, identity threat in the opposite direction, ethnic identification in the correct direction, and Britishness in the correct direction. So identity threat is not as expected.
+
+<<>>=
+lvallcfa <- as.data.frame(lvallcfa)
+lvallesem <- as.data.frame(lvallesem)
+table(southasianvsblack,attlabels$southasianvsblack,useNA="always")
+@
+
+<<>>=
+# Discrimination
+cor(cbind(lvallcfa$disc,lvallesem$disc,DISCRIMINATIONSUM))
+t.test(lvallcfa$disc ~ southasianvsblack)
+t.test(lvallesem$disc ~ southasianvsblack)
+t.test(DISCRIMINATIONSUM ~ southasianvsblack)
+tapply(DISCRIMINATIONSUM,southasianvsblack,mean)
+tapply(attlabels$DISCRIMINATIONSUM,attlabels$southasianvsblack,mean)
+
+
+# Identity Threat
+cor(cbind(lvallcfa$threat,lvallesem$threat,IDENTITYTHREATSUM))
+t.test(lvallcfa$threat ~ southasianvsblack)
+t.test(lvallesem$threat ~ southasianvsblack)
+t.test(IDENTITYTHREATSUM ~ southasianvsblack)
+
+# Ethnic Identification
+cor(cbind(lvallcfa$eth,lvallesem$eth,ETHNICITYSUM))
+t.test(lvallcfa$eth ~ southasianvsblack)
+t.test(lvallesem$eth ~ southasianvsblack)
+t.test(ETHNICITYSUM ~ southasianvsblack)
+
+# British Identification
+cor(cbind(lvallcfa$brit,lvallesem$brit,BRITISHNESSSUM))
+t.test(lvallcfa$brit ~ southasianvsblack)
+t.test(lvallesem$brit ~ southasianvsblack)
+t.test(BRITISHNESSSUM ~ southasianvsblack)
+@
+
+The expectation was that the first three of these would be positively associated with each other, but negatively associated with the last.
+<<>>=
+cor(cbind(lvallesem$disc,lvallesem$eth,lvallesem$threat,lvallesem$brit))
+@
+
+<<scatsrq1,fig.cap="Scatterplots related to rq1. Asian in red, Black in black.",fig.width=6.7*1.1,out.width="6.7in",fig.height=2.7*1.1,out.height="2.7in",fig.align="center",fig.lp="fig:scatsrq1">>=
+par(mfrow=c(1,3))
+plot(lvallesem$threat,lvallesem$disc,col=southasianvsblack+1,cex=.7)
+abline(lm(lvallesem$disc[southasianvsblack==0]~
+            lvallesem$threat[southasianvsblack==0]),col=1)
+abline(lm(lvallesem$disc[southasianvsblack==1]~
+            lvallesem$threat[southasianvsblack==1]),col=2)
+
+plot(lvallesem$threat,lvallesem$eth,col=southasianvsblack+1,cex=.7)
+abline(lm(lvallesem$eth[southasianvsblack==0]~
+            lvallesem$threat[southasianvsblack==0]),col=1)
+abline(lm(lvallesem$eth[southasianvsblack==1]~
+            lvallesem$threat[southasianvsblack==1]),col=2)
+
+plot(lvallesem$threat,lvallesem$brit,col=southasianvsblack+1,cex=.7)
+abline(lm(lvallesem$brit[southasianvsblack==0]~
+            lvallesem$threat[southasianvsblack==0]),col=1)
+abline(lm(lvallesem$brit[southasianvsblack==1]~
+            lvallesem$threat[southasianvsblack==1]),col=2)
+@
+
+
+\clearpage
+\subsection{RQ 2} 
+The mean will be higher for British born respondents for British identity, but lower for ethnic identification and life satisfaction. Both of these were observed.
+
+<<>>=
+table(countrybirth,attlabels$countrybirth,useNA="always")
+@
+
+<<>>=
+# British Identification
+t.test(lvallcfa$brit ~ countrybirth)
+t.test(lvallesem$brit ~ countrybirth)
+t.test(BRITISHNESSSUM ~ countrybirth)
+tapply(BRITISHNESSSUM, attlabels$countrybirth,mean)
+
+# Ethnic Identification
+t.test(lvallcfa$eth ~ countrybirth)
+t.test(lvallesem$eth ~ countrybirth)
+t.test(ETHNICITYSUM ~ countrybirth)
+tapply(ETHNICITYSUM, attlabels$countrybirth,mean)
+
+@
+
+\clearpage
+\subsection{RQ3} \emph{Religious, ethnic and British group identification will be positively associated with life satisfaction while discrimination-related identity threat will be negatively associated with life satisfaction.} 
+
+These are correlations between pairs of constructs, so could be examined using the ESEM based on just those sets of items. Here the whole set to be consistent with this section.
+
+The results in Table~\ref{tab:corrq3} show the results are consistent with expectations. 
+
+<<size="footnotesize">>=
+xx <- matrix(round(cor(lvallcfa,lvallesem),3),ncol=ncol(lvallesem))
+rownames(xx) <- colnames(lvallcfa)
+colnames(xx) <- colnames(lvallesem)
+xx
+xx <- matrix(round(cor(lvsums,lvallesem),3),ncol=ncol(lvallesem))
+rownames(xx) <- colnames(lvsums)
+colnames(xx) <- colnames(lvallesem)
+options(width=120)
+xx
+options(width=80)
+@
+
+<<tab:corrq3,results='asis'>>=
+corrsum <- cor(cbind(RELIGIONSUM,ETHNICITYSUM,BRITISHNESSSUM,DISCRIMINATIONSUM),
+    LIFESATISFACTIONSUM)
+corrcfa <-  with(lvallcfa,cor(cbind(rel,eth,brit,disc),lsat))
+corresem <- with(lvallesem,cor(cbind(rel,eth,brit,disc),lsat))
+xtab <- cbind(corrsum,corrcfa,corresem)
+xtab <- matrix(sub("0.",".",sprintf("%0.2f",xtab)),ncol=3)
+rownames(xtab) <- c('religion ident','ethnic ident','brit indent','discrim')
+colnames(xtab) <- c("Sum Scale","LVs from CFA","LVs from ESEM")
+xtable(xtab,caption="Correlations with life satisfaction for rq3",
+       label="tab:corrq3",align="lccc")
+@
+
+\clearpage
+\subsection{RQ 4}  \emph{Religious group identification will function as an enhancer of ethnic group identification.} There will be a positive $r$ for these. This is observed in Table~\ref{tab:corethrel}.
+
+
+<<>>=
+xtab <- cor(cbind(RELIGIONSUM,lvallcfa$rel,lvallesem$rel),
+    cbind(ETHNICITYSUM,lvallcfa$eth,lvallesem$eth))
+xtab <- matrix(sub("0.",".",sprintf("%0.3f",xtab)),ncol=3)
+@
+
+\begin{table}[h!] \caption{Correlations between Religion and Ethnicity.} \label{tab:corethrel}
+\begin{center}
+\begin{tabular}{llccc}
+&& \multicolumn{3}{c}{Ethnic Ident.} \\
+&& Sums & CFA & ESEM \\ \hline
+\multirow{3}{*}{Religion} 
+& Sums & \Sexpr{xtab[1,1]} & \Sexpr{xtab[1,2]} & \Sexpr{xtab[1,3]} \\
+& CFA  & \Sexpr{xtab[2,1]} & \Sexpr{xtab[2,2]} & \Sexpr{xtab[2,3]} \\ 
+& ESEM & \Sexpr{xtab[3,1]} & \Sexpr{xtab[3,2]} & \Sexpr{xtab[3,3]} \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\clearpage
+
+\subsection{RQ 5}
+ \emph{Discrimination will be negatively associated with British national identification.} And this is observed.
+
+
+<<>>=
+xtab <- cor(cbind(DISCRIMINATIONSUM,lvallcfa$disc,lvallesem$disc),
+    cbind(BRITISHNESSSUM,lvallcfa$brit,lvallesem$brit))
+xtab <- matrix(sub("0.",".",sprintf("%0.3f",xtab)),ncol=3)
+@
+
+\begin{table}[h!] \caption{Correlations between Discrimination and Britishness.} \label{tab:corbritdisc}
+\begin{center}
+\begin{tabular}{llccc}
+&& \multicolumn{3}{c}{Britishness} \\
+&& Sums & CFA & ESEM \\ \hline
+\multirow{3}{*}{Discrimination} 
+& Sums & \Sexpr{xtab[1,1]} & \Sexpr{xtab[1,2]} & \Sexpr{xtab[1,3]} \\
+& CFA  & \Sexpr{xtab[2,1]} & \Sexpr{xtab[2,2]} & \Sexpr{xtab[2,3]} \\ 
+& ESEM & \Sexpr{xtab[3,1]} & \Sexpr{xtab[3,2]} & \Sexpr{xtab[3,3]} \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\clearpage
+\subsection{RQ 6}
+\emph{Consistent with identity process theory, discrimination-related identity threat will be associated with British national identification (as a coping response).} Threat will associated with British identity. 
+
+<<>>=
+xtab <- cor(cbind(IDENTITYTHREATSUM,lvallcfa$threat,lvallesem$threat),
+    cbind(BRITISHNESSSUM,lvallcfa$brit,lvallesem$brit))
+xtab <- matrix(sub("0.",".",sprintf("%0.3f",xtab)),ncol=3)
+@
+
+\begin{table}[h!] \caption{Correlations between Threat and Britishness.} \label{tab:corbritdisc}
+\begin{center}
+\begin{tabular}{llccc}
+&& \multicolumn{3}{c}{Britishness} \\
+&& Sums & CFA & ESEM \\ \hline
+\multirow{3}{*}{Threat} 
+& Sums & \Sexpr{xtab[1,1]} & \Sexpr{xtab[1,2]} & \Sexpr{xtab[1,3]} \\
+& CFA  & \Sexpr{xtab[2,1]} & \Sexpr{xtab[2,2]} & \Sexpr{xtab[2,3]} \\ 
+& ESEM & \Sexpr{xtab[3,1]} & \Sexpr{xtab[3,2]} & \Sexpr{xtab[3,3]} \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\clearpage
+\subsection{RQ 7} \emph{The relationship between discrimination and life satisfaction will be mediated by discrimination-related identity threat.} 
+
+The finding with the sums is life satisfaction does not significantly predict discrimination, and including identity threat as a covariate doesn't change this. But looks different for the latent variables. 
+<<>>=
+summary(m1 <- lm(DISCRIMINATIONSUM ~ LIFESATISFACTIONSUM))
+summary(m2 <- lm(DISCRIMINATIONSUM ~ IDENTITYTHREATSUM))$r.squared
+summary(m3 <- update(m1, .~. + IDENTITYTHREATSUM))
+anova(m2,m3)
+@
+
+Now for CFA
+<<>>=
+summary(m1 <- lm(lvallcfa$disc ~ lvallcfa$lsat))
+summary(m2 <- lm(lvallcfa$disc ~ lvallcfa$threat))$r.squared
+summary(m3 <- update(m1, .~. + lvallcfa$threat))
+anova(m2,m3)
+@
+
+Now ESEM
+<<>>=
+summary(m1 <- lm(lvallesem$disc ~ lvallesem$lsat))
+summary(m2 <- lm(lvallesem$disc ~ lvallesem$threat))$r.squared
+summary(m3 <- update(m1, .~. + lvallesem$threat))
+anova(m2,m3)
+@
+
+\bibliography{../AllRefs}
+\end{document}
