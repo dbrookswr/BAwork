@@ -1,0 +1,1624 @@
+\documentclass[doc,floatsintext,hidelinks]{apa7}
+\usepackage{rotating}
+\usepackage[natbibapa]{apacite}
+\bibliographystyle{apacite}
+\usepackage{comment}
+\usepackage{soul}
+\usepackage{siunitx}
+\usepackage{lipsum}
+\usepackage{multirow}
+\usepackage{arydshln}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{rotating}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{tikzsymbols}
+\usetikzlibrary{shapes}
+\usetikzlibrary{fit}
+\usetikzlibrary{trees}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{arrows,shapes,positioning,fit,arrows.meta}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.markings}
+\usepackage{enumitem}
+\title{Methodological Considerations and Assumptions\\ \vspace{.2cm} in Social Science Research \\ \vspace{1cm} {\normalsize(to be submitted to the \emph{Journal of the British Academy} as JBA\#2)}}
+\shorttitle{Considerations and Assumptions} 
+\authorsnames{Daniel B. Wright}
+\authorsaffiliations{{University of Nevada, Las Vegas}}
+\abstract{The papers in this special issue are based largely on results from social surveys on beliefs and behaviours related to COVID-19. I describe the considerations and assumptions that we used when conducting this research and when analysing the resulting data. Data from a recent British Academy project on differences between the UK and US, and by ethnicities, with respect to COVID-19 beliefs and behaviours, are used as illustration. The aim is to provide a backstage view of how this approach to social scientific questions occurs. The scales appear to measure the constructions (e.g., Identity Resilience and Trust in Science) as intended, and these appear to influence reports of COVID-19 preventative behaviours.}
+\begin{document}
+\maketitle
+
+%\section{Introduction}
+When COVID-19 began spreading throughout the world, social scientists began studying the psychological effects of the pandemic on both individuals and societies. They attempted to measure behavioural changes due, in part, to guidelines from health researchers and politicians, and attempted to account for these behaviours using hypothesized psychological constructs. 
+
+There are several methods that social science researchers have used, but the primary one for much social science COVID-19 research has been some form of survey. This is the approach that our group has used for most of our research, and some of this is discussed in this special issue. Research findings--including our own--are usually disseminated through brief research articles that include a handful of statistics and a couple of plots with arrows connecting the key constructs. This succinct approach to sharing the results, which is efficient for many purposes, can make the decisions involved in conducting such research appear uncontroversial and it de-emphasises the considerations and assumptions underlying the approach. Here, I report some key findings to complement others in this special issue, but focus on the considerations that researchers faced when doing this type of research. These seldom are part of typical journal articles. As such, this paper will focus on more methodological concepts, and less on the psychological theories and their impacts on policies. See the first article in this issue \citep{JBA1} for discussion of the theories. 
+
+The purpose of this paper is to describe, to the broad audience of the \emph{Journal of the British Academy}, the steps that social scientists who rely on surveys and questionnaires go through while conducting research. By making the steps explicit I hope to provide readers from other disciplines an understanding of not just our research, but also that of others using this approach. Further, I hope that the paper will bring these assumptions to the forefront for social science survey researchers and encourage them to question and to justify their processes/assumptions.
+
+The following are, broadly, the considerations that our group to conduct our research and to analyse our data. I use these to structure the paper. This structure will not be appropriate for reporting all research, but it provides a useful way for readers to understand the research beyond a few summary statistics. 
+
+\begin{enumerate}[noitemsep]
+\item How to create a research team and to define the research questions/problems to be addressed? 
+\item What underlying theories and perspectives will inform the research?
+\item What are the populations of interest?
+\item What research design, including sampling, is appropriate?
+\item How will theoretical constructs be estimated?
+\item How will the relationships among these constructs be explored?
+\item How to summarize/disseminate the implications for different audiences?
+\end{enumerate}
+
+
+\noindent These considerations are listed in sequence, so for example exploring the relationship among theoretical constructs will only be appropriate for some research questions. All of these are inter-connected. The data used are from a British Academy funded project (CRUSA210025 to JR, GB, JB, and DW) where we examined the role of identity and other psychological constructs on COVID-19 related beliefs, like vaccine positivity, and behaviours, like hand-washing. 
+
+
+\section{Research Team and Research Questions}
+
+Deciding the research team and research questions are often done in concert, and these affect how the rest of the research pans out.\footnote{I refer to research questions broadly, and mean simply seeking some information from the research that will change what the researchers believe on some topic. If a study turns out exactly as expected, the change would be greater certainty in the original beliefs. These might be applied problems that exist in the world, or specific questions that the researchers have about some theory.} A research team may exist and decide what research questions to address, or an individual (or funding organization) may describe some broad research questions and a team will coalescence around these and fine-tune the research questions. In most cases it is a combination of these. Our research team was based on having people with particular social psychological knowledge and different methods skills. We had worked on several research methods projects \citep[e.g.,][]{BreakwellEA2020book} and psychological theory focusing on identity \citep[e.g.,][]{Breakwell2023}, risk \citep[e.g.,][]{Breakwell2014}, ethnic and cultural differences \citep[e.g.,][]{JaspalBreakwell2023}, and other pandemics including HIV/AIDS \citep[e.g.,][]{JaspalBayley2020}. We had also begun work on psychological constructs and COVID-19 \citep[e.g.,][]{BreakwellEA2021CovPrev,JaspalEA2022}. When the British Academy offered funding on social science research related to ethnicity and COVID-19, our team came together.  
+
+Our primary research question for this project was how well Identity Process Theory (IPT) \citep[e.g., see papers in][]{JaspalBreakwell2014} could account for individual differences in vaccine positivity and self-reported likelihood of being vaccinated among different ethnic groups in the UK and the US \citep[see][]{JBA3}. This topic was chosen because of the expertise of our team with respect to this theory and with respect to the methods needed to conduct the research. We believe identity resilience is a critical factor that influences people's beliefs and behaviours. This, as discussed in the next section and in detail in \citet{JBA1}, is a perspective we bring to the research. The role of identity resilience and other constructs in predicting outcomes is complex and this framework allows us to build a model of these dependencies. It allows us to examine several research questions simultaneously. Our main research questions are about estimating the size of different relationships. 
+
+In some social science circles it is common to distinguish quantitative and qualitative approaches. This distinction is problematic and I believe it has harmed social science by making people think that there is a schism between the ``camps'' and this has limited what researchers can learn from different approaches. It is worth stating that these phrases are used differently in other sciences and in ways that benefit research in those sciences and could benefit the social sciences more if they were used this way in these areas. For example, sometimes people refer to quantitative hypotheses that predict specific outcomes (e.g., light bends a precise amount when passing a massive object as proposed by Einstein and evaluated by Dyson et al., \citeyear{DysonEA1920}) and qualitative hypotheses that predict directions (e.g., the circumference of the earth is greater at the equator than around the poles, as predicted by Newton and evaluated by Boscovich, see Stigler, \citeyear{Stigler2016}). The later are more common in the social sciences, and this has consequences for how research should be done. \citet{Meehl1967} describes how using null hypothesis significance testing, the $p$-value approach is used, is ill-suited for evaluating qualitative hypotheses. The qualitative/quantitative distinction is also used in statistics \citep[e.g.,][]{BartholomewEA2011,Goodman1978} where the distinction refers to the type of data. Quantitative data have some underlying metric and qualitative data do not, and this informs the choice of statistical procedures \citep{Stevens1946}. The common social science use of the terms quantitative and qualitative research is less well-defined. These phrases are often used to describe broad characteristics that are often associated with one of these phrases (e.g., inferential statistics for quantitative; focus groups for qualitative), but there is disagreement about classifying research into this dichotomy (e.g., inferential statistics can be used with focus group data). Instead research should focus on the characteristics themselves.
+
+An important point to make is that typical academic research questions are fairly specific. Particularly within the context of COVID-19 research, there is the realization that hundreds of other research groups are conducting projects addressing related research questions. The hope is that together, these form a tapestry to provide a more complete perspective. Further, because these studies occur with different samples and at different times, with different government guidelines and different information on social media, having multiple patches of this tapestry existing at each location allows more confidence in consistent findings. 
+
+
+\begin{description}[noitemsep]
+\item{\underline{Team}.} Social psychological theory. Experience in other crisis research. Methodology.
+\item{\underline{Questions}.} Using IPT to frame the relationship between psychological constructs and behavioural intent. Examining the individual components, and looking for differences by ethnicity in the UK and US.
+\end{description}
+%\clearpage
+
+\section{Our Perspectives/Biases}
+All research is influenced by the perspectives of the researchers. Francis Bacon (e.g., \citeyear{BaconNovum}) recognized this, describing how the \emph{idols} of mind could distort how we interpreted the world. His advice was to avoid these prejudices, and that nature would more truthfully reveal itself. Our beliefs affect how we perform research and interpret research \citep[e.g.,][]{Breakwell2023method}, but completely removing all biases is neither possible nor desirable as we would be unable to perform research or interpret results \citep[e.g.,][Ch.~4]{PopperMyth}. The legacy of Bacon's desire to be without bias, coupled with the observation that society has achieved some (perhaps much) of his vision of the science-produce industrial society prophesized in the \emph{New Atlantis} \citep{BaconAtlantis}, has lead to the myth that scientists have successfully removed their beliefs, prejudices, and biases from the scientific process. In the social sciences, where this myth is even more far-fetched and where there seems to be the desire to appear to do research more like how some believe the natural sciences work, this has shaped how research is discussed.  
+
+
+For decades social and natural science students have been told to write in a formal style, for example saying ``The author did \dots'' or ``\emph{AuthorName} did \dots,'' rather than ``I (or We) did.''\footnote{Blind review means authors often refer to themselves in the third person when their papers are originally submitted, and usually this is not changed for later versions.} The intent was to distance the research from the researchers, downplaying the influence of the researchers. It was not about making the research more objective, but instead to describe the research as if it were more objective, as if Bacon's goal of removing the idols of mind had been achieved. Consider for example de-personalizing research papers. Campbell summarized the value of the writer owning their statements:
+\begin{quote}
+Here a moral issue is raised. If we are not prepared to make a personal statement in a personal form, are we justified in making it at all? Can true modesty, or any other virtue, permit me to occupy valiable space in airing my views and yet forbid me to call them mine? \\ \phantom{d}
+\hfill \citet[p.~1021]{Campbell1928}
+\end{quote}
+
+Like Bacon, I recognize that people bring their beliefs, prejudices, and biases and that these affect their research, but I believe the formality of much scientific writing appears to discount these influences. People choose what to study and how to study it, and interpret the observed data using what they already know. Researchers should be both knowledgeable and interested in what they research, and these biases should be influential. But researchers should remain skeptical of any individual findings, particularly their own. They should be ``bending over backwards to show how [they] maybe wrong'' \citep[p.~12]{Feynman1974}. They should consider other perspectives. As noted above there are issues with the qualitative/quantitative distinction as often used in the social sciences. So called qualitative research methods books stress that the authors should describe their perspectives, what is sometimes called \emph{reflexivity}. This is not discussed in most, so called, quantitative textbooks. The schism into these camps coupled with the history of telling students, when writing, to pretend that their perspectives do not affect their research, may be a reason that this is seldom discussed in some areas of the social sciences.
+
+People writing about empirical research should describe their beliefs in enough detail for readers both to understand why they are conducting the research that they are, and also how their perspectives may influence how they interpret the findings. Writers cannot describe all their biases both because this would be too great a task and because it would get repetitive across publications. They should use their best judgments to select those that they think are most relevant. 
+
+With respect to our group's research, within a survey context, we believe that respondents' answers to our survey questions provide information about their thoughts. This implies that they have have some kind of conscious access to this information. It is known that for many tasks humans do not have access to why they make decisions \citep[e.g.,][]{NisbettWilson1977} and that alternative approaches can be necessary to tap certain information \citep[e.g.,][]{GreenwaldEA1988}. Our assumption is that asking people their views, while not providing perfect access to their beliefs, provides responses that are similar enough to their beliefs to be of use. Specifically, we believe responses to questions that we believe \emph{a priori} are related to a construct can be used to construct an estimate for each person for that construct. This assumption should not be taken lightly and while researchers making this assumption do usually empirically examine some aspects of these assumptions, any conclusions still rely of the basic validity of this assumption.
+
+In addition, it is important to state that our beliefs influence the constructs that we choose to examine. Consider our choice to use a ``Trust in Science'' construct. We work in academia and while we are critical about all research (scientific or otherwise) and thus want multiple patches for the research tapestry as mentioned above, we believe that the scientific process is better than existing alternatives for allowing wise decision making. In fact, we sometimes get annoyed with those that do not share this belief. Our belief in the value of the scientific method has influenced our choice of including this construct and our \emph{a priori} belief that it plays an important role in adherence to health guidelines. 
+
+We trust, to some extent, the scientific literature and rely on this for our methods. For example, we use a trust in science scale by \citet{NadelsonEA2014} where they report the psychometric properties for their scale with their sample. The psychometrics they report are specific to their sample. A scale does not have, for example, a particular level of reliability. It only has this in relation to a sample. As such, we assume that the scale should have good qualities for our samples, but we do examine some, but not all, aspects these.  
+
+
+%Seher ESEN, Menşure ALKIŞ KÜÇÜKAYDIN, Turkish Adaptation Study of the Trust in Science and Scientists Scale: Validity and Reliability Study, Research on Education and Psychology, 10.54535/rep.1089295, (2022).
+
+Another belief that we have is that IPT provides a good framework to examine the relationships among variables including identity related variables. This includes developing the theory/framework and using it in many prior publications \citep[for a review see][]{Breakwell2015}. This study was not designed to test IPT as a theory, but to use it as a framework to examine various components across respondents from two countries.
+
+
+\begin{description}[noitemsep]
+\item{\underline{Self-report}.} While recognizing that self-reported beliefs can be biased, we believe that the responses to the scales we use do reflect associated psychological constructs and can be used to construct useful estimates for these constructs.
+\item{\underline{Beliefs about Health Guidelines}.} There are disagreements in both the UK and the US about both details of the government health guidelines and trust in these institutions. 
+\item{\underline{Identity Process Theory}.} We believe identity, as well as the other psychological constructs that we choose to measure, relate to each other and to vaccine positivity. \end{description}
+
+
+\section{Population of Interest}
+
+The funding of our project was to examine differences by ethnicity for people in the UK and US, applying IPT to COVID-19 beliefs and behaviours. We are also interested in the relationship among these constructs in other countries, but for this project the UK and US are our main interests, though as part of this project we did examine data from several countries \citep[e.g.,][]{JaspalEA2023JoH,WrightEA2022respalt}. We are interested in the general population. We focus on adults {\color{red} what is on Glynis notes**} in most US states parental consent is required for COVID-19 vaccines (\url{https://www.kff.org/other/state-indicator/state-parental-consent-laws-for-covid-19-vaccination/}). Avoiding people under 18 years old also makes conducting the research simpler as many ethics guidelines require people under a certain age to provide parental consent to take part in studies. While there is interest in how several specific groups have reacted to health guidelines, vaccine positivity, \emph{etc.}, for example religious groups, right-wing conspiracy advocates, those with existing medical conditions, here our focus is the general population. It is important to note that other projects funded as part of this British Academy initiative did look at more specific groups (see \url{https://www.thebritishacademy.ac.uk/news/the-british-academy-publishes-studies-examining-covid-vaccine-engagement-in-uk-and-usa/}). 
+
+
+\begin{description}[noitemsep]
+\item{\underline{Population of interest}.} People 18 years and older in the UK and US with large enough sub-samples of different ethnic categories to allow comparisons.
+\end{description}
+
+
+\section{Research design}
+
+\subsection{Target population and sampling}
+In introductory research methods classes students are told that the statistical procedures often assume that a simple random sample of the population of interest is taken.\footnote{A simple random sample, of size $n$, is defined as one where all possible samples of size $n$ are equally probable. Most lotteries are designed to be this, though see \citet{Fienberg1971}.} This is not plausible in most research. First, all surveys of this type, in the UK and US, are voluntary and therefore many people will not take part. Further, to conduct a simple random sample you need a list of the population. While electoral roles provide much of the population, many would still be missed. 
+
+Because the samples will not be perfectly representative of population of interest, making inference from the sample to the population requires assuming that it is close enough that the conclusions will still be valuable. Importantly, inference in social science is usually not about the absolute level of some variable, like it is when predicting election results from surveys. Usually it is about comparisons among groups or across time, where similar sampling procedures have been used for different groups/time periods. Sometimes experiments are embedded within a survey where respondents are randomly allocated into different conditions. This allows causal inference about how differences in the ways that the conditions are treated to be made on measures after the manipulations have occurred. 
+
+Thus, we conducted our survey knowing that attaining a truly representative sample was impractical. Further, as it was conducted during the COVID-19 pandemic in person interviewing was not an option. We chose to use an online survey. We constructed the survey using the popular tool Qualtics (\url{https://www.qualtrics.com/}) used. This allowed a link for the survey to be posted using Prolific (\url{https://www.prolific.co/}) which allows us to set up filters (e.g., we wanted UK and US respondents, with quotas that allowed us to have enough respondents in several ethnic categories to allow comparisons). Online participants have a reputation for not being as focused as those answering questions in person, though the several studies have shown that they produce data at least of comparable quality to in person administration \citep[e.g.,][]{SheehanPittman2016}. The online aspect of the instrument allows some of the respondents to be excluded. For example, we removed duplicate IP address because people may have talked, we included attention checks, \emph{etc}.
+
+
+
+
+<<readdata,warning=FALSE,message=FALSE,echo=FALSE>>=
+library(aplpack)        # for backback stemleaf
+library(car)            # for scatterplotmatrix
+library(cluster)        # for clusGap
+library(Cronbach)       # for cron.ci
+library(dendextend)     # for plot_horiz.dendrogram
+library(DescTools)      # for AxisBreak
+library(EFA.dimensions) # for DIMTESTS
+library(MBESS)          # for ci.reliability
+library(foreign)        # to read SPSS
+library(Hmisc)          # for errbar, histbackback
+library(lavaan)         # for cfa
+library(ltm)            # for cronbach.alpha
+library(english)        # for as.english
+library(psych)          # for lots on psychometrics
+library(semPlot)        # for semPaths
+library(superb)         # for CI.mean
+library(xtable)         # for making tables in LaTeX directly from R
+where <- "C:\\Users\\wrighd12\\Documents\\Covid\\"
+dfile <- paste0(where,"BApart3fin.sav")
+p3 <- read.spss(dfile,to.data.frame=TRUE,use.value.labels=FALSE)
+p3labels <- read.spss(dfile,to.data.frame=TRUE,use.value.labels=TRUE)
+#attach(p3)
+@
+
+
+<<message=FALSE,echo=FALSE>>=
+#summary(Age)
+gt100 <- with(p3,as.english(sum(Age > 100,na.rm=TRUE)))
+lt18 <- with(p3,as.english(sum(Age < 18,na.rm=TRUE)))
+naage <- with(p3,as.english(sum(is.na(Age))))
+#gt100;lt18;naage
+p3$Age[p3$Age < 18] <- NA
+p3$Age[p3$Age > 100] <- NA
+attach(p3)
+@
+
+
+
+
+
+<<size="footnotesize",eval=FALSE,echo=FALSE>>=
+options(width=150)
+names(p3)  #printed names, not shown here
+options(width=80)
+@
+
+
+It is important to discuss the exclusion criteria that are used in any study and how missing and odd values are dealt with. With online studies, the IP (internet protocol) address is usually available, and we exclude duplicate IP addresses both because this may be the same person who is using two Prolific accounts or otherwise it is likely this is a housemate who may have discussed the content of the study. Extremely fast responses are also often removed. Attention checking questions, which often include a phrase like ``ignore the rest of this question, just tick the option B'' \citep[see][for detailed discussion]{GummerEA2021}, are also often included. There are numerous guidelines for constructing online surveys \citep[e.g.,][]{BiffignandiBethlehem2021}. With online surveys it is possible to force people to respond to each item. If the question is poorly worded or there is some other reason why the person feels it is inappropriate to respond to one of the items, this can be annoying and affect the quality of all subsequent responses by the person. However, for the types of scales that we use in this study having people provide an answer for all questions is useful. There are methods to address missing data \citep[e.g.,][]{Rubin1987,VanBuuren2018}, but if it is believed that each person can provide a meaningful response to an item it is worth having that response. Odd values (sometimes called outliers, but the word ``outlier'' is sometimes used in a more technical way) also arise, particularly when people type in their responses. We had people type their age in years into the survey. Some appeared to write their year of birth. We treat those as missing. Similarly, when we asked people what confused them about COVID-19 guidelines, some responses were difficult to interpret. 
+
+\begin{comment}
+One question that often arises in surveys with experiments embedded within them is how to analyse the data after the experimental manipulation if the manipulation is not the concern of that particular analysis. There are two situations. One in which it is very unlikely that the manipulation has a substantive effect. For example, towards the end of our survey we ask respondents their gender, ethnicity, and other demographic variables. It is unlikely *our* experimental manipulations would affect responses to these questions. The second situation is where the manipulation may affect the responses. The effects on the quantitative responses were non-significant, meaning there was not convincing evidence showing that the estimates for any individual construct went up or down. Given the sample size was fairly large for social science surveys of this type ($n$ = \Sexpr{nrow(p3)}), we can assume any effects, whether up or down, are likely small. While the possible effects of including interactions between this manipulation and other effects can be included in models, this would result in a large and complex model. We usually prefer simpler models both for communication and because as the number of components of a model increases so do the chances of one of these components errantly showing an effect. This means that unless we are specifically examining the manipulation, because any effects are small in the sample, we do not include these. Still, some researchers opt for more complex models.
+\end{comment}
+
+\subsection{Which Demographics?}
+The demographics that we were most interested in are: ethnicity, sex, age, education, and we asked some questions about political affiliation. We also asked questions that are of particular importance to the COVID-19 guidelines, including the number of people in one's household, because this is related to number of contacts and therefore the possibility of contagion. How demographic questions are asked and which categories are included in the response alternatives can be very contentious. The meaning of, for example, ethnic categories differs between the UK and the US. We tended to follow the ways in which our government surveys ask these questions as well as the phrasing in both our survey program (Qualtrics) and the sampling program (Prolific). With ethnicity it is clear both that there is not a clear way to differentiate all people and that there is much ethnic variety within any of the categories that we choose. For ethnicity we had Prolific perform a quota sample for the categories they use for ethnicity. Quota sampling means that you attempt to get a pre-determined number of people (a quota) for each category \citep{Kalton2021}. The breakdown we achieved is shown in Table~\ref{tab:demoethnic}.
+
+{\color{red} Need to make sure that this is being done the same way as in the ethnicity article.}
+
+<<eval=FALSE>>=
+with(p3labels,table(UK_Ethnicity_Categorical))
+with(p3labels,table(ETHNICITY))
+with(p3labels,table(US_ETHNICITY))
+@
+
+The gender breakdown was: 
+\Sexpr{table(p3labels$Gender)[2]} (\Sexpr{round(100*mean(p3$Gender==2,na.rm=TRUE))}\%) female,
+\Sexpr{table(p3labels$Gender)[1]} (\Sexpr{round(100*mean(p3$Gender==1,na.rm=TRUE))}\%) male, \Sexpr{table(p3labels$Gender)[3]} (\Sexpr{round(100*mean(p3$Gender==3,na.rm=TRUE))}\%) other, and there was one missing value. The survey asked respondents for a number for their age in years. Two %\Sexpr{lt18}  
+said they were nine years old (to have a Prolific account they must be 18 or older), three %\Sexpr{print(gt100)} 
+said they over 100 (listing their likely year of birth), and one %\Sexpr{naage} 
+left the age variable blank. Excluding these the median was \Sexpr{round(median(p3$Age,na.rm=TRUE),1)} years old and the mean was \Sexpr{sprintf("%0.2f",mean(p3$Age,na.rm=TRUE))} years old. The skew towards younger responses is predicted as Prolific began in universities and was seen as a convenient way for students and recent alumni to earn extra money. More details of the demographics are covered in the articles dealing with those. Here the only demographic comparisons were by country: \Sexpr{table(p3$UK_or_US)[1]} were from the UK and \Sexpr{table(p3$UK_or_US)[2]} were from the US.
+
+
+\subsection{Why \textsf{R}?}
+We use the free statistical environment \textsf{R} \citep[for a brief description see \citeauthor{Chambers2009}, 2009; for a thorough description see \citeauthor{Chambers2008}, 2008]{R}. This is one of the most used system for data; it has been described by \citet{MizumotoPlonsky2016} as a \emph{lingua franca} (a shared or bridging language) for both learning and implementing statistics. There are advantages and disadvantages to all statistical environments, and no system will be best for all situations. It suits our purposes for this paper well. This document I wrote by combining \textsf{R} code within a \LaTeX{} document, and used \textbf{knitr} \citep{knitr} to combine these to create the paper in a more readable format. One of the concerns about the statistics in empirical articles is not being able to replicate the findings. We include at \url{github.***} the final submitted \LaTeX{} document so anyone (both \textsf{R} and \LaTeX{} are freeware) can recreate the document. 
+
+\begin{description}[noitemsep]
+\item{\underline{Target Population}.} Prolific sample of UK and US respondents. This will not produce a perfectly representative sample of the population of interest. No practical method will. The choice is pragmatic. Quotas will be used to allow comparisons of ethnicities \citep[see discussion in][]{JBA3}.
+\item{\underline{Items}.} Several existing scales will be used, as well as some common demographic questions. 
+\item{\underline{Analysis}.} The environment \textsf{R} will be used for analysis. 
+\end{description}
+
+\section{Estimating psychological constructs}
+Scientists construct models that: 
+
+\begin{enumerate}[noitemsep]
+\item They believe approximate nature closely enough to be useful and 
+\item They believe provide a useful framework to interpret their findings.
+\end{enumerate}
+
+\noindent Their choice is often influenced by the statistical methods they use, but these statistical methods also influence their theories \citep{Gigerenzer1991}. A popular model that social science researchers assume is the latent variable model and as will be clear in this section this relates to both theories and methods. Here are described two common ways to model data from social science scales.
+
+The scales that I use are: the 16-item Identity Resilience Index \citep{BreakwellEA2022IR}, the 12-item version of the Interpersonal Support Evaluation List \citep{CohenEA1985}, the 10-item COVID-19 Preventive Behaviours Index \citep{BreakwellEA2021CovPrev}, six items from the Trust in Science scale \citep{NadelsonEA2014}, and sets of questions on Trust in six Authorities and Trust in six Sources of Information. Each of these has been discussed elsewhere and been shown for those samples to produce quality responses. However, when social scientists use scales in their own contexts the norm is to check at least some of the qualities of the scale in this different context. Here I describe in more detail how we examined The Trust in Science scale for our research. The items from Trust in Science are listed in Figure~\ref{fig:singlelatwqs}. 
+
+
+<<makescales,echo=FALSE>>=
+#More constructs are created in this section than used in the
+#paper because for clarity discussing the methods we opted for
+#having fewer constructs. 
+
+# Identity Resilience 1-16
+IDRes <- cbind(
+   ID_Res_1, ID_Res_2, ID_Res_3, ID_Res_4, ID_Res_5, ID_Res_6,
+   ID_Res_7, ID_Res_8, ID_Res_9,ID_Res_10,ID_Res_11,ID_Res_12,
+  ID_Res_13,ID_Res_14,ID_Res_15,ID_Res_16)
+# Social Support
+SocSup <- cbind(
+   Soc_Sup_1,Soc_Sup_2,Soc_Sup_3, Soc_Sup_4, Soc_Sup_5, Soc_Sup_6,
+   Soc_Sup_7,Soc_Sup_8,Soc_Sup_9,Soc_Sup_10,Soc_Sup_11,Soc_Sup_12)
+# COVID prevention behaviours 1-10
+CovPrev <- cbind(
+    Cov_Prevent_1, Cov_Prevent_2,Cov_Prevent_3, Cov_Prevent_4,
+    Cov_Prevent_5, Cov_Prevent_6,Cov_Prevent_7, Cov_Prevent_8,
+    Cov_Prevent_9,Cov_Prevent_10)
+# Trust in Science 1-6
+TrustSci <- cbind(
+   Trust_Sci_1, Trust_Sci_2,Trust_Sci_3, Trust_Sci_4,
+   Trust_Sci_5, Trust_Sci_6)
+# Trust in different authorities
+TrustAuth <- cbind(
+   Trust_Auth_Doctors,Trust_Auth_Nurses,Trust_Auth_NatPoliticians,
+   Trust_Auth_LocalPoliticians,Trust_Auth_UniAcademics,
+   Trust_Auth_Journalists,Trust_Auth_Scientists)
+# Trust information sources
+Trust_Info <- cbind(
+ Trust_Info_WhatsApp,Trust_Info_Blogs,Trust_Info_SupportGroups,
+ Trust_Info_SocialNetworks,Trust_Info_ProfHealthSites,
+ Trust_Info_NHS_CDC_Website)
+# Mistrust
+MisTrust <- cbind(
+  Mistrust_1,Mistrust_2,Mistrust_3)
+
+##?? after manipulation??
+# Ingroup power
+IGPower <- cbind(
+  InGroup_Power_1,InGroup_Power_2,InGroup_Power_3,
+  InGroup_Power_4,InGroup_Power_5,InGroup_Power_6,
+  InGroup_Power_7,InGroup_Power_8,InGroup_Power_9)
+# COVID vax trust
+# Whether to include GenVax Trust. I assume yes
+# 1-10 + Gevax
+VaxTrust <- cbind(
+  Gen_Vac_Trust_1, Cov_Vac_Trust_1, Cov_Vac_Trust_2, Cov_Vac_Trust_3,
+  Cov_Vac_Trust_4, Cov_Vac_Trust_5, Cov_Vac_Trust_6, Cov_Vac_Trust_7,
+  Cov_Vac_Trust_8, Cov_Vac_Trust_9, Cov_Vac_Trust_10)
+# COVID fear
+CovFear10 <- cbind(
+  Cov_Fear_1,Cov_Fear_2,Cov_Fear_3,Cov_Fear_4,Cov_Fear_5,
+  Cov_Fear_6,Cov_Fear_7,Cov_Fear_8,Cov_Fear_9,Cov_Fear_10)
+CovFear <- CovFear10[,c(2,6,7,8,9,10)]
+
+# Just easier names for DBW to remember!
+p3$CopeDoubt <- CopeDoubt <- ID_Threat_3 
+p3$LifeSat <- LifeSat <- Cant_Ladd_1
+@
+
+
+\subsection{A Latent Variable Conceptualization}
+An assumption of much social and psychological research is that responses to several related items can be aggregated to estimate a single construct. A latent variable model is often assumed for this purpose. \citet{LoehlinBeaujean2017} provide an excellent introduction to latent variable models, mathematical details are in \citet{BartholomewEA2011}, and \citet{Spearman1904} is the seminal historic text. Suppose that you have six variables and that you believed each is related to a particular construct, say \emph{Trust in Science}. Figure~\ref{fig:singlelatwqs} shows a latent variable model that might be used for this and the six items that we had respondents answer on a 1 to 5 scale from strongly disagree to strongly agree. The arrows mean that what is described in the node at the nock of the arrow \emph{influences} what is described in the node at the arrow's head. The assumption is that responses to each question, for example the \emph{Scientists ignore \dots} rectangle, are influenced by variation in a respondent's \emph{Trust in Science} construct. In addition, responses are also affected by a combination of idiosyncratic aspects of this item and random variation, shown by the \emph{e} nodes to the right of each rectangle. These are often called the error terms associated with the individual items, but it is important to note that they are a combination of error and systematic variation specific to the item. For the model shown in Figure~\ref{fig:singlelatwqs}, these error terms are assumed independent of each other. This means that after taking into account \emph{Trust in Science} the variables themselves are independent. There are ways to examine if this assumption is justified, discussed below. In these plots, the most popular convention is to have the latent variables shown in ellipses and the observed variables shown in rectangles.
+
+%This figure was made without the question stems, and is left here for use in PowerPoint slides where the word font is too small to show the whole question stems.
+\begin{comment}
+\begin{figure}[ht!] \caption{Assumed relationship between a psychological construct, \emph{Trust in Science}, and six survey items.} \label{fig:singlelat}
+\centering
+\begin{tikzpicture}[scale=1]
+  \node(phantom1)at (0,5.5) {\phantom{1}};
+  \node[scale=1.0,draw,ellipse,align=center] (lv) at (0,2.5) {Trust in\\Science};
+  \node[scale=1.0,draw,rectangle,align=center] (v1) at (4,5) {Item 1};
+  \node[scale=1.0,draw,rectangle,align=center] (v2) at (4,4) {Item 2};
+  \node[scale=1.0,draw,rectangle,align=center] (v3) at (4,3) {Item 3};
+  \node[scale=1.0,draw,rectangle,align=center] (v4) at (4,2) {Item 4};
+  \node[scale=1.0,draw,rectangle,align=center] (v5) at (4,1) {Item 5};
+  \node[scale=1.0,draw,rectangle,align=center] (v6) at (4,0) {Item 6};
+
+  \node[scale=.8,draw,ellipse,align=center] (e1) at (6,5) {e1};
+  \node[scale=.8,draw,ellipse,align=center] (e2) at (6,4) {e2};
+  \node[scale=.8,draw,ellipse,align=center] (e3) at (6,3) {e3};
+  \node[scale=.8,draw,ellipse,align=center] (e4) at (6,2) {e4};
+  \node[scale=.8,draw,ellipse,align=center] (e5) at (6,1) {e5};
+  \node[scale=.8,draw,ellipse,align=center] (e6) at (6,0) {e6};
+
+
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](lv) -- (v1.west);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](lv) -- (v2.west);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](lv) -- (v3.west);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](lv) -- (v4.west);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](lv) -- (v5.west);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](lv) -- (v6.west);
+
+  \draw[shorten >=0.0cm,shorten <=.075cm,<-](v1) -- (e1);
+  \draw[shorten >=0.0cm,shorten <=.075cm,<-](v2) -- (e2);
+  \draw[shorten >=0.0cm,shorten <=.075cm,<-](v3) -- (e3);
+  \draw[shorten >=0.0cm,shorten <=.075cm,<-](v4) -- (e4);
+  \draw[shorten >=0.0cm,shorten <=.075cm,<-](v5) -- (e5);
+  \draw[shorten >=0.0cm,shorten <=.075cm,<-](v6) -- (e6);
+\end{tikzpicture}
+\end{figure}
+\end{comment}
+
+\begin{figure}[ht!] \caption{Assumed relationship between a psychological construct, \emph{Trust in Science}, and six survey items.} \label{fig:singlelatwqs}
+\centering
+\begin{tikzpicture}[scale=1]
+  \node(phantom1)at (0,5.5) {\phantom{1}};
+  \node[scale=1.0,draw,ellipse,align=center] (lv) at (-3,2.25) {Trust in\\Science};
+  \node[scale=.9,draw,rectangle,align=center,right] (v1) at (1.2,5) {Scientists ignore evidence\\that contradicts their work.};
+  \node[scale=.9,draw,rectangle,align=center,right] (v2) at (1.2,3.9) {Scientific theories are\\weak explanations.};
+  \node[scale=.9,draw,rectangle,align=center,right] (v3) at (1.2,2.8) {Scientists intentionally keep\\their work secret.};
+  \node[scale=.9,draw,rectangle,align=center,right] (v4) at (1.2,1.7) {I trust that the work of scientists \\will make life better for people.};  %added will, was to make (without is)
+  \node[scale=.9,draw,rectangle,align=center,right] (v5) at (1.2,0.6) {We should trust the\\work of scientists.};
+  \node[scale=.9,draw,rectangle,align=center,right] (v6) at (1.2,-.5) {We should trust that scientists\\ are being honest in their work.};
+
+  \node[scale=.8,draw,ellipse,align=center] (e1) at (8,5) {e1};
+  \node[scale=.8,draw,ellipse,align=center] (e2) at (8,3.9) {e2};
+  \node[scale=.8,draw,ellipse,align=center] (e3) at (8,2.8) {e3};
+  \node[scale=.8,draw,ellipse,align=center] (e4) at (8,1.7) {e4};
+  \node[scale=.8,draw,ellipse,align=center] (e5) at (8,0.6) {e5};
+  \node[scale=.8,draw,ellipse,align=center] (e6) at (8,-.5) {e6};
+
+
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](lv) -- (v1.west);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](lv) -- (v2.west);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](lv) -- (v3.west);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](lv) -- (v4.west);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](lv) -- (v5.west);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](lv) -- (v6.west);
+
+  \draw[shorten >=0.0cm,shorten <=.075cm,<-](v1) -- (e1);
+  \draw[shorten >=0.0cm,shorten <=.075cm,<-](v2) -- (e2);
+  \draw[shorten >=0.0cm,shorten <=.075cm,<-](v3) -- (e3);
+  \draw[shorten >=0.0cm,shorten <=.075cm,<-](v4) -- (e4);
+  \draw[shorten >=0.0cm,shorten <=.075cm,<-](v5) -- (e5);
+  \draw[shorten >=0.0cm,shorten <=.075cm,<-](v6) -- (e6);
+\end{tikzpicture}
+\end{figure}
+
+Not all the sets of items fit well with this conceptualisation. Two sets of questions ask respondents how much they trust different authorities and different sources of information. As we discuss below, a different conceptualisation is useful for these.
+
+\subsection{Dimensions versus Categories Assumption}
+Within the latent variable framework, the latent and observed variables can be based on dimensions or categories \citep{BartholomewEA2011}. It is often assumed that values on the underlying constructs vary along continuous dimensions. While there are methods to examine this assumption empirically \citep[e.g.,][]{WallerMeehl1998}, the dimensions assumption is common in much social science and I make this assumption for the Trust in Science scale. Further, the data are often not able to distinguish these conceptualisations \citep{Bartholomew1993}, so often the choice of treating the latent constructs as dimensions or categories is decided by what the researchers feel is the better conceptualisation for their purposes.
+
+In addition, it is also often assumed that responses for each of the individual items vary along a dimension, even when the items are presented with a small set of discrete response alternatives as here. There are alternatives appropriate when it is assumed that the item values are categorical or ordinal \citep[e.g., item response theory, see][]{EmbretsonReise2000}. I make this assumption, but accept that others may not. 
+
+When creating scales that other people will use, often those people will have small samples or even just a few individuals, and want to create summary measures. This means that using complex methods that require large samples to estimate values for people's constructs may not be practical. Scale designers take this into account and try to design scales where taking the mean of responses provides a good estimate for the construct. There are advantages to having a simple method for allowing others to estimate these psychological constructs and often scales are developed such that the mean of the responses provides a good estimate. This is like how teachers often report the percentage of correct responses on an assessment for their students. This will likely not have as good statistical properties as the more complex procedures \citep{McNeishWolf2020}, but in some contexts it is a good option available \citep{WidamanRevelle2022}.
+
+\subsection{Measurement Qualities}
+Researchers are interested in the reliability, validity, and fairness of their scales \citep{Standards}. Reliability is whether the instrument produces similar responses each time it is used in the similar contexts. Validity has a few definitions, but here it is used to say whether the aggregate score is appropriate for the intended purpose \citep{Kane2013}. Fairness is whether the scale and its items produce similar values for people who have similar values for the latent construct, but are from different groups. For example, a scale designed to measure botany for all plants, but with 90\% of the items on the assessment being desert plants, would be unfair as this would be an advantage for people living in the desert regions. 
+
+Each of these qualities should be examined for any measurement. The first step for all three of these is to think about the questions and how respondents are likely to answer the questions as opposed to how the designers intended the questions to be answered. Much of this work is done when the scale is being developed. When scales are introduced authors usually publish characteristics of these scales that they found when applied to their data. This does not mean that these characteristics will be the same with other samples. The assumption usually made is that the scale will have similar qualities when used with other samples. When using other scales often only reliability is empirically examined. This is probably because examining reliability is easier to do than validity or fairness. Below I report the most common measure of reliability, Cronbach's $\alpha$, also called Guttman's $\lambda_3$ \citep{Cronbach1951,Guttman1945}, but discuss its assumptions.
+
+Before progressing, it is worth saying that the expected relationships for some of the items may be negative. This is often done by the scale developers in order to identify any respondents who are just ticking all the responses at one end of the scale without reading the questions. It is often desirable to reverse score the items that are designed to be in the opposite direction of the construct. For example, the first three items in Figure~\ref{fig:singlelatwqs} should have low values for those who trust science. There is a simple rule for reverse scoring items. If an item goes from $m$ to $n$, letting $\mathit{newvar}_i = (n + m) - \mathit{oldvar}_i$ means the minimum and maximum are the same as the other items. 
+
+<<echo=FALSE>>=
+TS1 <- 6 - TrustSci[,1]
+TS2 <- 6 - TrustSci[,2]
+TS3 <- 6 - TrustSci[,3]
+TrustSci <- cbind(TS1,TS2,TS3,TrustSci[,4:6])
+
+
+ID_Res_2 <- 6 - ID_Res_2
+ID_Res_3 <- 6 - ID_Res_3
+ID_Res_4 <- 6 - ID_Res_4
+ID_Res_14 <- 6 - ID_Res_14
+IDRes <- cbind(IDRes[,1],ID_Res_2,ID_Res_3,ID_Res_4,IDRes[,5:13],ID_Res_14,IDRes[,15:16])
+
+SocSup[,1] <- Soc_Sup_1 <- 6 - Soc_Sup_1 
+SocSup[,2] <- Soc_Sup_2 <- 6 - Soc_Sup_2 
+SocSup[,7] <- Soc_Sup_7 <- 6 - Soc_Sup_7 
+SocSup[,8] <- Soc_Sup_8 <- 6 - Soc_Sup_8
+SocSup[,11] <- Soc_Sup_11 <- 6 - Soc_Sup_11 
+SocSup[,12] <- Soc_Sup_12 <- 6 - Soc_Sup_12 
+
+CovPrev[,8] <- Cov_Prevent_8 <- 6 - Cov_Prevent_8 
+CovPrev[,9] <- Cov_Prevent_9 <- 6 - Cov_Prevent_9 
+
+# VaxTrust None Reverse scored
+# CovFear some listed, but not in the 6 we are using
+@
+<<echo=FALSE>>=
+k <- 600
+@
+
+\subsection{Exploring dimensionality with the scree plot}
+The assumption in Figure~\ref{fig:singlelatwqs} is that a single latent variable influences all of the observed variables. The assumption is that the scale is uni-dimensional. This assumption can be examined empirically. Exploratory data analysis should be conducted, including looking to see if all items are correlated as they should be, prior to creating any latent variables. This can be done with both a statistical test, like Pearson's correlations, and visually with scatterplots. Figure~\ref{fig:scatmattrust} shows the scatterplot matrix for the Trust in Science items with their correlations. The scatterplots allow outliers to be identified and to check when a straight line seems to describe the relationship well. With typical survey items that are measured on discrete rating scales it is useful to add a small random variable to each point so that each point can be seen. This is called \emph{jittering}. In addition, only \Sexpr{k} of the data points are shown in order to make identifying which coordinates have the most values easier. With most social science applications, the data points are spread out so trying to tell if a pattern is approximately linear is difficult. At this point of the analysis the researcher is usually looking only for clear signs of non-linearity (e.g., is there a floor or ceiling effect) or if the relationship is not monotonic. 
+
+\begin{figure}[ht!]
+\caption{Scatterplot matrix of the six Trust in Science items. Six hundred cases were randomly choosen and jittered so that it is easier to see the relationships.}
+\label{fig:scatmattrust}
+<<scatmattrust,echo=FALSE,out.height="5in",fig.align="center",fig.height=5,fig.width=6.4,fig.out="6.4in">>=
+set.seed(8383)
+nc <- ncol(TrustSci)
+TrustScix <- TrustSci[sample(1:nrow(TrustSci),k),]
+par(mar=c(.5,.5,1.5,.5))
+par(mfrow=c(nc,nc))
+for (i in 1:nc)
+  for (j in 1:nc){
+    if (j == i) {plot.new(); text(.2,.1,paste("Item",i)); next}
+    if (j > i) {plot.new(); next}
+    plot(jitter(TrustScix[,i],factor=2),jitter(TrustScix[,j],factor=2),
+         xlab="",ylab="",pch='.',
+         main="",yaxt='n',xaxt='n')
+    mtext(paste("Correlation = ",
+       sub("0.",".",sprintf("%0.2f",cor(TrustSci[,i],TrustSci[,j])),fixed=TRUE)),3,.2,
+       cex=.55) 
+  }
+@
+\end{figure}
+
+Two things can be concluded from these scatterplots. First, there are more responses above 3 (the mid-point on the 5-point scale) than below 3: \Sexpr{100*round(mean(c(TrustSci)>3),2)}\% compared with \Sexpr{100*round(mean(c(TrustSci)<3),2)}\%, Thus, our sample is more trusting in science than distrusting, but there is a spread in responses. Second, the correlations are all at or above $r = .5$. What does this mean? \citet{Cohen1992} describes $r = .5$ as \emph{large}, so in his terminology all of the associations are large, but his terminology is context dependent. Using Figure~\ref{fig:singlelatwqs} as a way of describing the size of correlations, suppose that there is a normally distributed latent variable with a standard deviation of 1 and two observed variables that are this variable plus an item specific error variable with a standard deviation of 1. Provided that these two error variables are unrelated, the correlation between these two variables would be about $r = .5$. If there is less error, say $\sigma = 1/2$, then the correlation would be about $r = .8$. Looking at the spread of the data in the scatterplots also helps you to get a feel for what the different values of $r$ mean with respect to how spread out the data are. You would also want to identify any pairs that had particularly high or low values.
+
+
+<<eval=FALSE,echo=FALSE>>=
+k <- 10000000
+lv <- rnorm(k)
+cor(lv+rnorm(k),lv+rnorm(k))
+cor(lv+rnorm(k)/2,lv+rnorm(k)/2)
+@
+
+
+One of the most used methods to examine the number of dimensions of a set of items is a \emph{scree} test \citep{Cattell1966}. Scree is the geological term for the loose rubble that has accumulated at the base of a steep hillside. The metaphor is that the hillside represents the latent constructs (e.g., Trust in Science) and the rocks in the scree are the $e$ in Figure~\ref{fig:singlelatwqs}, which are assumed to be a combination of random error and idiosyncratic aspects of those items. Cattell likened the underlying structure of a scale to the hillside and the ``scree represents a `rubbish' of small error factors'' \citep[p.~249]{Cattell1966}. The statistics to construct the scree are usually calculated using the eigenvalues of the correlation matrix. The sum of the eigenvalues of most correlation matrices is the number of variables. The first eigenvalue, which will be the largest, shows how much of this total can be accounted for by a linear combination of the variables or in lay terms how much of the variation can be accounted for by a single dimension. The second is how much more can be accounted for by a second dimension, and so on. A scree plot is made by drawing a line connecting the eigenvalues. If there are six items, there will be six eigenvalues providing no item is a linear combination of the other five. The amount accounted for necessarily decreases with each dimension. Cattell notes that using the scree ``requires the acquisition of \emph{some} art in administering it'' (p.~256, \emph{emphasis} in original). 
+
+There are several procedures that can be helpful to guide this art. The most useful in my opinion is adding a line for how the scree would look if there were no structure to the data. This is called \emph{parallel analysis}. To be part of the hillside you would want to use the dimensions shown on the scree that are well above the random line. What ``well above'' means is up to the discretion of the analyst.  \citet[see also \citeauthor{AuerswaldMoshagen2019}, \citeyear{AuerswaldMoshagen2019}]{VelicerEA2000} described several statistical procedures that aim to identify the number of dimensions, and some of these are used below. It is worth noting that reality is much more complex than our models, and that a near infinite number of likely related constructs will inform how people answer any of these questions. Cattell was aware of this: ``There is no such thing as `the true number of factors to extract,' since the only possible assumption is that both the number of substantive and the number of error common factors each exceed $n$, the number of variables'' \citep[p.~273]{Cattell1966}. The analyst must decide what is appropriate simplification for their purposes to allow them to make what they believe are wise decisions. 
+
+
+% If you are reading the txt file, the next bit of code is because fa.parallel uses cat() rather than message() to send a message, and this is harder to turn off in knitr, so I just re-ran the necessary functions from psych with the hack of changing cat() to message(). This is why those writing R code are encouraged to use message, warning, and error, when appropriate.
+<<faparallel,echo=FALSE>>=
+#fa.parallel uses cat r
+mclapply <- function (X, FUN, ..., mc.preschedule = TRUE, mc.set.seed = TRUE, 
+    mc.silent = FALSE, mc.cores = 1L, mc.cleanup = TRUE, mc.allow.recursive = TRUE, 
+    affinity.list = NULL) 
+{
+    cores <- as.integer(mc.cores)
+    if (cores < 1L) 
+        stop("'mc.cores' must be >= 1")
+    if (cores > 1L) 
+        stop("'mc.cores' > 1 is not supported on Windows")
+    lapply(X, FUN, ...)
+}
+
+fa.parallel <- 
+function (x, n.obs = NULL, fm = "minres", fa = "both", nfactors = 1, 
+    main = "Parallel Analysis Scree Plots", n.iter = 20, error.bars = FALSE, 
+    se.bars = FALSE, SMC = FALSE, ylabel = NULL, show.legend = TRUE, 
+    sim = TRUE, quant = 0.95, cor = "cor", use = "pairwise", 
+    plot = TRUE, correct = 0.5) 
+{
+    cl <- match.call()
+    ci <- 1.96
+    arrow.len <- 0.05
+    nsub <- dim(x)[1]
+    nvariables <- dim(x)[2]
+    resample <- TRUE
+    if ((isCorrelation(x)) && !sim) {
+        warning("You specified a correlation matrix, but asked to just resample (sim was set to FALSE).  This is impossible, so sim is set to TRUE")
+        sim <- TRUE
+        resample <- FALSE
+    }
+    if (!is.null(n.obs)) {
+        nsub <- n.obs
+        rx <- x
+        resample <- FALSE
+        if (dim(x)[1] != dim(x)[2]) {
+            warning("You specified the number of subjects, implying a correlation matrix, but do not have a correlation matrix, correlations found ")
+            switch(cor, cor = {
+                rx <- cor(x, use = use)
+            }, cov = {
+                rx <- cov(x, use = use)
+                covar <- TRUE
+            }, tet = {
+                rx <- tetrachoric(x, correct = correct)$rho
+            }, poly = {
+                rx <- polychoric(x, correct = correct)$rho
+            }, mixed = {
+                rx <- mixedCor(x, use = use, correct = correct)$rho
+            }, Yuleb = {
+                rx <- YuleCor(x, , bonett = TRUE)$rho
+            }, YuleQ = {
+                rx <- YuleCor(x, 1)$rho
+            }, YuleY = {
+                rx <- YuleCor(x, 0.5)$rho
+            })
+            if (!sim) {
+                warning("You specified a correlation matrix, but asked to just resample (sim was set to FALSE).  This is impossible, so sim is set to TRUE")
+                sim <- TRUE
+                resample <- FALSE
+            }
+        }
+    }
+    else {
+        if (isCorrelation(x)) {
+            warning("It seems as if you are using a correlation matrix, but have not specified the number of cases. The number of subjects is arbitrarily set to be 100  ")
+            rx <- x
+            nsub = 100
+            n.obs = 100
+            resample <- FALSE
+        }
+        else {
+            switch(cor, cor = {
+                rx <- cor(x, use = use)
+            }, cov = {
+                rx <- cov(x, use = use)
+                covar <- TRUE
+            }, tet = {
+                rx <- tetrachoric(x, correct = correct)$rho
+            }, poly = {
+                rx <- polychoric(x, correct = correct)$rho
+            }, mixed = {
+                rx <- mixedCor(x, use = use, correct = correct)$rho
+            }, Yuleb = {
+                rx <- YuleCor(x, , bonett = TRUE)$rho
+            }, YuleQ = {
+                rx <- YuleCor(x, 1)$rho
+            }, YuleY = {
+                rx <- YuleCor(x, 0.5)$rho
+            })
+        }
+    }
+    valuesx <- eigen(rx)$values
+    if (SMC) {
+        diag(rx) <- smc(rx)
+        fa.valuesx <- eigen(rx)$values
+    }
+    else {
+        fa.valuesx <- fa(rx, nfactors = nfactors, rotate = "none", 
+            fm = fm, warnings = FALSE)$values
+    }
+    temp <- list(samp = vector("list", n.iter), samp.fa = vector("list", 
+        n.iter), sim = vector("list", n.iter), sim.fa = vector("list", 
+        n.iter))
+    templist <- mclapply(1:n.iter, function(XX) {
+        if (is.null(n.obs)) {
+            bad <- TRUE
+            while (bad) {
+                sampledata <- matrix(apply(x, 2, function(y) sample(y, 
+                  nsub, replace = TRUE)), ncol = nvariables)
+                colnames(sampledata) <- colnames(x)
+                switch(cor, cor = {
+                  C <- cor(sampledata, use = use)
+                }, cov = {
+                  C <- cov(sampledata, use = use)
+                  covar <- TRUE
+                }, tet = {
+                  C <- tetrachoric(sampledata, correct = correct)$rho
+                }, poly = {
+                  C <- polychoric(sampledata, correct = correct)$rho
+                }, mixed = {
+                  C <- mixedCor(sampledata, use = use, correct = correct)$rho
+                }, Yuleb = {
+                  C <- YuleCor(sampledata, , bonett = TRUE)$rho
+                }, YuleQ = {
+                  C <- YuleCor(sampledata, 1)$rho
+                }, YuleY = {
+                  C <- YuleCor(sampledata, 0.5)$rho
+                })
+                bad <- any(is.na(C))
+            }
+            values.samp <- eigen(C)$values
+            temp[["samp"]] <- values.samp
+            if (fa != "pc") {
+                if (SMC) {
+                  sampler <- C
+                  diag(sampler) <- smc(sampler)
+                  temp[["samp.fa"]] <- eigen(sampler)$values
+                }
+                else {
+                  temp[["samp.fa"]] <- fa(C, fm = fm, nfactors = nfactors, 
+                    SMC = FALSE, warnings = FALSE)$values
+d                }
+            }
+        }
+        if (sim) {
+            simdata = matrix(rnorm(nsub * nvariables), nrow = nsub, 
+                ncol = nvariables)
+            sim.cor <- cor(simdata)
+            temp[["sim"]] <- eigen(sim.cor)$values
+            if (fa != "pc") {
+                if (SMC) {
+                  diag(sim.cor) <- smc(sim.cor)
+                  temp[["sim.fa"]] <- eigen(sim.cor)$values
+                }
+                else {
+                  fa.values.sim <- fa(sim.cor, fm = fm, nfactors = nfactors, 
+                    rotate = "none", SMC = FALSE, warnings = FALSE)$values
+                  temp[["sim.fa"]] <- fa.values.sim
+                }
+            }
+        }
+        replicates <- list(samp = temp[["samp"]], samp.fa = temp[["samp.fa"]], 
+            sim = temp[["sim"]], sim.fa = temp[["sim.fa"]])
+    })
+    if (is.null(ylabel)) {
+        ylabel <- switch(fa, pc = "eigen values of principal components", 
+            fa = "eigen values of principal factors", both = "eigenvalues of principal components and factor analysis")
+    }
+    values <- t(matrix(unlist(templist), ncol = n.iter))
+    values.sim.mean = colMeans(values, na.rm = TRUE)
+    values.ci = apply(values, 2, function(x) quantile(x, quant))
+    if (se.bars) {
+        values.sim.se <- apply(values, 2, sd, na.rm = TRUE)/sqrt(n.iter)
+    }
+    else {
+        values.sim.se <- apply(values, 2, sd, na.rm = TRUE)
+    }
+    ymin <- min(valuesx, values.sim.mean)
+    ymax <- max(valuesx, values.sim.mean)
+    sim.pcr <- sim.far <- NA
+    switch(fa, pc = {
+        if (plot) {
+            plot(valuesx, type = "b", main = main, ylab = ylabel, 
+                ylim = c(ymin, ymax), xlab = "Component Number", 
+                pch = 4, col = "blue")
+        }
+        if (resample) {
+            sim.pcr <- values.sim.mean[1:nvariables]
+            sim.pcr.ci <- values.ci[1:nvariables]
+            sim.se.pcr <- values.sim.se[1:nvariables]
+            if (plot) {
+                points(sim.pcr, type = "l", lty = "dashed", pch = 4, 
+                  col = "red")
+            }
+        } else {
+            sim.pcr <- NA
+            sim.se.pc <- NA
+        }
+        if (sim) {
+            if (resample) {
+                sim.pc <- values.sim.mean[(nvariables + 1):(2 * 
+                  nvariables)]
+                sim.pc.ci <- values.ci[(nvariables + 1):(2 * 
+                  nvariables)]
+                sim.se.pc <- values.sim.se[(nvariables + 1):(2 * 
+                  nvariables)]
+            } else {
+                sim.pc <- values.sim.mean[1:nvariables]
+                sim.pc.ci <- values.ci[1:nvariables]
+                sim.se.pc <- values.sim.se[1:nvariables]
+            }
+            if (plot) {
+                points(sim.pc, type = "l", lty = "dotted", pch = 4, 
+                  col = "red")
+            }
+            pc.test <- which(!(valuesx > sim.pc.ci))[1] - 1
+        } else {
+            sim.pc <- NA
+            sim.pc.ci <- NA
+            sim.se.pc <- NA
+            pc.test <- which(!(valuesx > sim.pcr.ci))[1] - 1
+        }
+        fa.test <- NA
+        sim.far <- NA
+        sim.fa <- NA
+    }, fa = {
+        if (plot) {
+            plot(fa.valuesx, type = "b", main = main, ylab = ylabel, 
+                ylim = c(ymin, ymax), xlab = "Factor Number", 
+                pch = 2, col = "blue")
+        }
+        sim.se.pc <- NA
+        if (resample) {
+            sim.far <- values.sim.mean[(nvariables + 1):(2 * 
+                nvariables)]
+            sim.far.ci <- values.ci[(nvariables + 1):(2 * nvariables)]
+            sim.se.far <- values.sim.se[(nvariables + 1):(2 * 
+                nvariables)]
+            if (plot) {
+                points(sim.far, type = "l", lty = "dashed", pch = 2, 
+                  col = "red")
+            }
+        }
+        if (sim) {
+            if (resample) {
+                sim.fa <- values.sim.mean[(3 * nvariables + 1):(4 * 
+                  nvariables)]
+                sim.fa.ci <- values.ci[(3 * nvariables + 1):(4 * 
+                  nvariables)]
+                sim.se.fa <- values.sim.se[(3 * nvariables + 
+                  1):(4 * nvariables)]
+            } else {
+                sim.fa <- values.sim.mean[(nvariables + 1):(2 * 
+                  nvariables)]
+                sim.fa.ci <- values.sim.mean[(nvariables + 1):(2 * 
+                  nvariables)]
+                sim.se.fa <- values.sim.se[(nvariables + 1):(2 * 
+                  nvariables)]
+                sim.far <- NA
+                sim.far.ci <- NA
+                sim.se.far <- NA
+            }
+            if (plot) {
+                points(sim.fa, type = "l", lty = "dotted", pch = 2, 
+                  col = "red")
+            }
+            fa.test <- which(!(fa.valuesx > sim.fa.ci))[1] - 
+                1
+        } else {
+            sim.fa <- NA
+            fa.test <- which(!(fa.valuesx > sim.far.ci))[1] - 
+                1
+        }
+        sim.pc <- NA
+        sim.pcr <- NA
+        sim.se.pc <- NA
+        pc.test <- NA
+    }, both = {
+        if (plot) {
+            plot(valuesx, type = "b", main = main, ylab = ylabel, 
+                ylim = c(ymin, ymax), xlab = "Factor/Component Number", 
+                pch = 4, col = "blue")
+            points(fa.valuesx, type = "b", pch = 2, col = "blue")
+        }
+        if (sim) {
+            if (resample) {
+                sim.pcr <- values.sim.mean[1:nvariables]
+                sim.pcr.ci <- values.ci[1:nvariables]
+                sim.se.pcr <- values.sim.se[1:nvariables]
+                sim.far <- values.sim.mean[(nvariables + 1):(2 * 
+                  nvariables)]
+                sim.se.far <- values.sim.se[(nvariables + 1):(2 * 
+                  nvariables)]
+                sim.far.ci <- values.ci[(nvariables + 1):(2 * 
+                  nvariables)]
+                sim.pc <- values.sim.mean[(2 * nvariables + 1):(3 * 
+                  nvariables)]
+                sim.pc.ci <- values.ci[(2 * nvariables + 1):(3 * 
+                  nvariables)]
+                sim.se.pc <- values.sim.se[(2 * nvariables + 
+                  1):(3 * nvariables)]
+                sim.fa <- values.sim.mean[(3 * nvariables + 1):(4 * 
+                  nvariables)]
+                sim.fa.ci <- values.ci[(3 * nvariables + 1):(4 * 
+                  nvariables)]
+                sim.se.fa <- values.sim.se[(3 * nvariables + 
+                  1):(4 * nvariables)]
+                pc.test <- which(!(valuesx > sim.pcr.ci))[1] - 
+                  1
+                fa.test <- which(!(fa.valuesx > sim.far.ci))[1] - 
+                  1
+            } else {
+                sim.pc <- values.sim.mean[1:nvariables]
+                sim.pc.ci <- values.ci[1:nvariables]
+                sim.se.pc <- values.sim.se[1:nvariables]
+                sim.fa <- values.sim.mean[(nvariables + 1):(2 * 
+                  nvariables)]
+                sim.fa.ci <- values.ci[(nvariables + 1):(2 * 
+                  nvariables)]
+                sim.se.fa <- values.sim.se[(nvariables + 1):(2 * 
+                  nvariables)]
+                pc.test <- which(!(valuesx > sim.pc.ci))[1] - 
+                  1
+                fa.test <- which(!(fa.valuesx > sim.fa.ci))[1] - 
+                  1
+            }
+            if (plot) {
+                points(sim.pc, type = "l", lty = "dotted", pch = 4, 
+                  col = "red")
+                points(sim.fa, type = "l", lty = "dotted", pch = 4, 
+                  col = "red")
+                points(sim.pcr, type = "l", lty = "dashed", pch = 2, 
+                  col = "red")
+                points(sim.far, type = "l", lty = "dashed", pch = 2, 
+                  col = "red")
+            }
+            pc.test <- which(!(valuesx > sim.pc.ci))[1] - 1
+            fa.test <- which(!(fa.valuesx > sim.fa.ci))[1] - 
+                1
+        } else {
+            sim.pcr <- values.sim.mean[1:nvariables]
+            sim.pcr.ci <- values.ci[1:nvariables]
+            sim.se.pcr <- values.sim.se[1:nvariables]
+            sim.far <- values.sim.mean[(nvariables + 1):(2 * 
+                nvariables)]
+            sim.far.ci <- values.ci[(nvariables + 1):(2 * nvariables)]
+            sim.se.far <- values.sim.se[(nvariables + 1):(2 * 
+                nvariables)]
+            sim.fa <- NA
+            sim.pc <- NA
+            sim.se.fa <- NA
+            sim.se.pc <- NA
+            pc.test <- which(!(valuesx > sim.pcr.ci))[1] - 1
+            fa.test <- which(!(fa.valuesx > sim.far.ci))[1] - 
+                1
+        }
+        if (resample) {
+            if (plot) {
+                points(sim.pcr, type = "l", lty = "dashed", pch = 4, 
+                  col = "red")
+                points(sim.far, type = "l", lty = "dashed", pch = 4, 
+                  col = "red")
+            }
+        }
+    })
+    if (error.bars) {
+        if (!any(is.na(sim.pc))) {
+            for (i in 1:length(sim.pc)) {
+                ycen <- sim.pc[i]
+                yse <- sim.se.pc[i]
+                arrows(i, ycen - ci * yse, i, ycen + ci * yse, 
+                  length = arrow.len, angle = 90, code = 3, col = par("fg"), 
+                  lty = NULL, lwd = par("lwd"), xpd = NULL)
+            }
+        }
+        if (!any(is.na(sim.pcr))) {
+            for (i in 1:length(sim.pcr)) {
+                ycen <- sim.pcr[i]
+                yse <- sim.se.pcr[i]
+                arrows(i, ycen - ci * yse, i, ycen + ci * yse, 
+                  length = arrow.len, angle = 90, code = 3, col = par("fg"), 
+                  lty = NULL, lwd = par("lwd"), xpd = NULL)
+            }
+        }
+        if (!any(is.na(sim.fa))) {
+            for (i in 1:length(sim.fa)) {
+                ycen <- sim.fa[i]
+                yse <- sim.se.fa[i]
+                arrows(i, ycen - ci * yse, i, ycen + ci * yse, 
+                  length = arrow.len, angle = 90, code = 3, col = par("fg"), 
+                  lty = NULL, lwd = par("lwd"), xpd = NULL)
+            }
+        }
+        if (!any(is.na(sim.far))) {
+            for (i in 1:length(sim.far)) {
+                ycen <- sim.far[i]
+                yse <- sim.se.far[i]
+                arrows(i, ycen - ci * yse, i, ycen + ci * yse, 
+                  length = arrow.len, angle = 90, code = 3, col = par("fg"), 
+                  lty = NULL, lwd = par("lwd"), xpd = NULL)
+            }
+        }
+    }
+    if (show.legend && plot) {
+        if (is.null(n.obs)) {
+            switch(fa, both = {
+                if (sim) {
+                  legend("topright", c("  PC  Actual Data", "  PC  Simulated Data", 
+                    " PC  Resampled Data", "  FA  Actual Data", 
+                    "  FA  Simulated Data", " FA  Resampled Data"), 
+                    col = c("blue", "red", "red", "blue", "red", 
+                      "red"), pch = c(4, NA, NA, 2, NA, NA), 
+                    text.col = "green4", lty = c("solid", "dotted", 
+                      "dashed", "solid", "dotted", "dashed"), 
+                    merge = TRUE, bg = "gray90")
+                } else {
+                  legend("topright", c("  PC  Actual Data", " PC  Resampled Data", 
+                    "  FA  Actual Data", " FA  Resampled Data"), 
+                    col = c("blue", "red", "blue", "red"), pch = c(4, 
+                      NA, 2, NA, NA), text.col = "green4", lty = c("solid", 
+                      "dashed", "solid", "dashed"), merge = TRUE, 
+                    bg = "gray90")
+                }
+            }, pc = {
+                if (sim) {
+                  legend("topright", c("  PC  Actual Data", "  PC  Simulated Data", 
+                    " PC  Resampled Data"), col = c("blue", "red", 
+                    "red", "blue", "red", "red"), pch = c(4, 
+                    NA, NA, 2, NA, NA), text.col = "green4", 
+                    lty = c("solid", "dotted", "dashed", "solid", 
+                      "dotted", "dashed"), merge = TRUE, bg = "gray90")
+                } else {
+                  legend("topright", c("  PC  Actual Data", " PC  Resampled Data"), 
+                    col = c("blue", "red", "red", "blue", "red", 
+                      "red"), pch = c(4, NA, NA, 2, NA, NA), 
+                    text.col = "green4", lty = c("solid", "dashed", 
+                      "solid", "dotted", "dashed"), merge = TRUE, 
+                    bg = "gray90")
+                }
+            }, fa = {
+                if (sim) {
+                  legend("topright", c("  FA  Actual Data", "  FA  Simulated Data", 
+                    " FA  Resampled Data"), col = c("blue", "red", 
+                    "red", "blue", "red", "red"), pch = c(4, 
+                    NA, NA, 2, NA, NA), text.col = "green4", 
+                    lty = c("solid", "dotted", "dashed", "solid", 
+                      "dotted", "dashed"), merge = TRUE, bg = "gray90")
+                } else {
+                  legend("topright", c("  FA  Actual Data", " FA  Resampled Data"), 
+                    col = c("blue", "red", "red", "blue", "red", 
+                      "red"), pch = c(4, NA, NA, 2, NA, NA), 
+                    text.col = "green4", lty = c("solid", "dashed", 
+                      "solid", "dotted", "dashed"), merge = TRUE, 
+                    bg = "gray90")
+                }
+            })
+        }
+        else {
+            switch(fa, both = {
+                legend("topright", c("PC  Actual Data", " PC  Simulated Data", 
+                  "FA  Actual Data", " FA  Simulated Data"), 
+                  col = c("blue", "red", "blue", "red"), pch = c(4, 
+                    NA, 2, NA), text.col = "green4", lty = c("solid", 
+                    "dotted", "solid", "dotted"), merge = TRUE, 
+                  bg = "gray90")
+            }, pc = {
+                legend("topright", c("PC  Actual Data", " PC  Simulated Data"), 
+                  col = c("blue", "red", "blue", "red"), pch = c(4, 
+                    NA, 2, NA), text.col = "green4", lty = c("solid", 
+                    "dotted", "solid", "dotted"), merge = TRUE, 
+                  bg = "gray90")
+            }, fa = {
+                legend("topright", c("FA  Actual Data", " FA  Simulated Data"), 
+                  col = c("blue", "red", "blue", "red"), pch = c(4, 
+                    NA, 2, NA), text.col = "green4", lty = c("solid", 
+                    "dotted", "solid", "dotted"), merge = TRUE, 
+                  bg = "gray90")
+            })
+        }
+    }
+    colnames(values) <- paste0("Sim", 1:ncol(values))
+    if (fa != "pc" && plot) 
+        abline(h = 1)
+    results <- list(fa.values = fa.valuesx, pc.values = valuesx, 
+        pc.sim = sim.pc, pc.simr = sim.pcr, fa.sim = sim.fa, 
+        fa.simr = sim.far, nfact = fa.test, ncomp = pc.test, 
+        Call = cl)
+    if (fa == "pc") {
+        colnames(values)[1:nvariables] <- paste0("C", 1:nvariables)
+    }
+    else {
+        colnames(values)[1:(2 * nvariables)] <- c(paste0("C", 
+            1:nvariables), paste0("F", 1:nvariables))
+        if (sim) {
+            if (resample) 
+                colnames(values)[(2 * nvariables + 1):ncol(values)] <- c(paste0("CSim", 
+                  1:nvariables), paste0("Fsim", 1:nvariables))
+        }
+        results$nfact <- fa.test
+    }
+    results$ncomp <- pc.test
+    results$values <- values
+    message("Parallel analysis suggests that ")
+    message("the number of factors = ", fa.test, " and the number of components = ", 
+        pc.test, "\n")
+    class(results) <- c("psych", "parallel")
+    return(invisible(results))
+}
+@
+
+<<echo=FALSE>>=
+folder <- "C:\\Users\\wrighd12\\Documents\\Covid\\"
+opts_chunk$set(cache.path = 
+      paste0(folder,"cache"))
+@
+
+
+The scree plots are shown in Figure~\ref{fig:scree} along with lines created to show what the scree would be like for random data. These were made using \texttt{fa.parallel} from the \textbf{psych} package \citep{psych}. Figure~\ref{fig:scree} shows the Trust in Science, the Social Support scale, and the COVID prevention scale can be well described with a single dimension as a single eigenvalue stands out above the random scree lines. The Identity Resilience scale is, as discussed in earlier manuscripts \citep[e.g.,][]{BreakwellEA2022IR}, multidimensional with four eigenvalues being above the random scree line. This will be explored in more detail below. The final two, Trust in Authorities and Trust in Sources, are not unidimensional. As discussed below, the way in which respondents likely answer these questions mean a different approach can be useful. The \texttt{DIMTEST} function from the \textsf{R} package \textbf{EFA.dimensions} \citep{EFA.dimensions} was used to help with the decision. It produces, among other statistics, the empirical Kaiser criterion. It suggests that the Trust in Science scale, the Social Support scale, and the COVID prevention scale can be well described with a single dimension, the Identity Resilience scale with four dimensions, and the Trust in Authorities and Trust in Sources of Information with two dimensions each. These coincide both with my view of the scree plots (and this will often occur as they are based on the same information) and my beliefs about the scales prior to conducting the research.
+
+
+<<echo=FALSE>>=
+scales <- list(TrustSci=TrustSci,SocSup=SocSup,CovPrev=CovPrev,IDRes=IDRes,
+  TrustAuth=TrustAuth,Trust_Info=Trust_Info)
+eigs <- list()
+for (i in 1:length(scales)){
+  eigs <- append(eigs,list(eigen(cor(scales[[i]]))$values))
+}
+names(eigs) <- paste0("eigs",names(scales))
+
+#for (i in 1:length(scales)){
+#  print(names(scales[i]))
+#  print(DIMTESTS(scales[[i]],display=0)$dimtests)  # display default is to print lots
+#  print(cronbach.alpha(scales[[i]],CI=TRUE,standardized=TRUE,B=2000)$alpha)
+#}
+@
+
+
+<<makingscree,message=FALSE,cache=FALSE,echo=FALSE>>=
+set.seed(244)
+pcvals <- NULL
+for (i in 1:length(scales)){
+  xx <- scales[[i]]
+  for (j in 1:ncol(scales[[i]]))
+    xx[,j] <- xx[,j]/sd(xx[,j]) # standardized
+  sss <- fa.parallel(xx,fa="pc",n.iter=100,plot=FALSE)
+  vals <- list(sss$pc.values,sss$pc.sim)
+  pcvals[[paste0("Scale",i)]] <- vals
+      }
+@
+
+
+\begin{figure}[ht!]
+\caption{Scree plots for the six scales examined.}
+\label{fig:scree}
+<<scree,out.height="4in",fig.align="center",fig.height=4,fig.width=6,fig.out="6in",echo=FALSE>>=
+par(mfrow=c(2,3))
+par(mar=c(3,4,3,0))
+for (i in 1:length(scales)) {
+  plot(1:length(pcvals[[i]][[1]]),pcvals[[i]][[1]],type='b',cex=.5,
+       las=1,xlab="",ylab="",main="",cex.axis=1,cex.main=.9) 
+  mtext(names(scales)[i],3,.5,cex=.7)
+  mtext("Component",1,2,cex=.6)
+  mtext("Eigenvalue",2,2.5,cex=.6)
+  lines(1:length(pcvals[[i]][[1]]),pcvals[[i]][[2]],type='l',lty=2)
+}
+@
+\end{figure}
+
+It is worth examining the Identity Resilience measure further. Previous work \citep{BreakwellEA2022IR} has found this scale to have four components, the scree suggests four dimensions, and we used four items designed to tap each of these purposefully. Confirmatory factor analysis (CFA) can be used in this situation. In addition, it is believed that there is still an underlying Identity Resilience construct that influences all the items, but each item is also influenced by one of the four components. Thus, the first item can be thought of as:
+
+\begin{equation}
+\mathit{item \; 1} = \mathit{Identity \; Resilience} + \mathit{Self \text{-} Esteem} + e_1
+\end{equation}
+
+
+
+
+<<echo=FALSE>>=
+bifacmodel <- 
+'g =~ ID_Res_1 + ID_Res_2 + ID_Res_3 + ID_Res_4 + ID_Res_5 + ID_Res_6 + 
+      ID_Res_7 + ID_Res_8 + ID_Res_9 + ID_Res_10 + ID_Res_11 + ID_Res_11 + 
+      ID_Res_12 + ID_Res_13 + ID_Res_14 + ID_Res_15  + ID_Res_16 
+ IDesteem =~  ID_Res_1 + ID_Res_2 + ID_Res_3 + ID_Res_4
+ IDefficacy =~ ID_Res_5 + ID_Res_6 + ID_Res_7 + ID_Res_8
+ IDdistinct =~ ID_Res_9 + ID_Res_10 + ID_Res_11 + ID_Res_12
+ IDcontinuity =~ ID_Res_13 + ID_Res_14 + ID_Res_15 + ID_Res_16
+ g ~~ 0*IDesteem
+ g ~~ 0*IDefficacy 
+ g ~~ 0*IDdistinct
+ g ~~ 0*IDcontinuity
+ IDesteem ~~ 0*IDefficacy
+ IDesteem ~~ 0*IDdistinct
+ IDesteem ~~ 0*IDcontinuity
+ IDefficacy ~~ 0*IDdistinct
+ IDefficacy ~~ 0*IDcontinuity
+ IDdistinct ~~ 0*IDcontinuity'
+singfacmodel <- 
+'g =~ ID_Res_1 + ID_Res_2 + ID_Res_3 + ID_Res_4 + ID_Res_5 + ID_Res_6 + 
+      ID_Res_7 + ID_Res_8 + ID_Res_9 + ID_Res_10 + ID_Res_11 + ID_Res_11 + 
+      ID_Res_12 + ID_Res_13 + ID_Res_14 + ID_Res_15  + ID_Res_16 
+'
+@
+
+<<echo=FALSE>>=
+highermodel <- 
+'IDesteem =~  ID_Res_1 + ID_Res_2 + ID_Res_3 + ID_Res_4
+ IDefficacy =~ ID_Res_5 + ID_Res_6 + ID_Res_7 + ID_Res_8
+ IDdistinct =~ ID_Res_9 + ID_Res_10 + ID_Res_11 + ID_Res_12
+ IDcontinuity =~ ID_Res_13 + ID_Res_14 + ID_Res_15 + ID_Res_16
+ g =~ IDesteem + IDefficacy + IDdistinct + IDcontinuity
+'
+@
+
+
+
+<<echo=FALSE>>=
+bifacID <- cfa(bifacmodel, data = p3, std.lv = TRUE, information="observed")  
+#summary(bifacID)
+secondID <- cfa(highermodel, data = p3, std.lv = TRUE, information="observed")  
+bics <- anova(bifacID,secondID)
+@
+
+This is called the bi-factor model and is depicted in Figure~\ref{fig:bifacIDb}. It shows each of the four proposed components of identity resilience influencing four items (listed on the left side of the figure), and all 16 of the items being influenced by some overall identity resilience construct. In addition, each item has a unique $e$ term influencing it. These are sometimes depicted using curved arrows going from each of the 16 observed items onto itself. These are not shown as that would make the figure look cluttered. I compared the fit of this model with several alternatives, and this model fits better than the alternatives tested. For subsequent analysis in this paper, the single Identity Resilience construct is used. The values for these constructs were estimated using the \textsf{R} package \textbf{lavaan} \citep{lavaan}. There are other ways to conceptualize the four components and an over-arching identity resilience variable. For example, a second order model has an over-arching variable influencing each of the four components, which then influence the observed variables. The bi-factor model fits better with our conceptualization and also fits these data better. There are many statistics that are used to compare the fit of models. Here the Bayesian Information Criterion \citep[BIC][]{Schwarz1978} is used. Lower values mean the fit is better. The BIC for the bi-factor model is \Sexpr{prettyNum(round(bics$BIC[1]),big.mark=",")}, the BIC for the second order model is \Sexpr{prettyNum(round(bics$BIC[2]),big.mark=",")}. The BIC value is lower for the bi-factor model so according to this statistic it is the preferred model.
+
+
+<<echo=FALSE,eval=FALSE>>=
+semPaths(bifacID,residuals=FALSE,layout="tree2",exoCov=FALSE,bifactor="ID",rotation=4,
+         label.cex=c(rep(1.2,16),rep(1.6,5))))
+mtext("Bi-factor ID",3,-2,at=-1)
+@
+
+
+<<fig.show='hide',echo=FALSE>>=
+dd <- semPaths(bifacID,residuals=FALSE,layout="tree2",exoCov=FALSE,bifactor="g",
+         sizeMan=3.6,sizeMan2=3.1,rotation=4,sizeLat=6,sizeLat2=4,
+         label.cex=c(rep(1.55,16),rep(1.1,5)))
+dd$graphAttributes$Nodes$labels <- c(paste0("i",1:16),dd$graphAttributes$Nodes$labels[17:21])
+#dd$graphAttributes$Nodes$label.cex <- 1
+dd$graphAttributes$Edges$color <- rep("black",32) 
+@
+
+%Below is code to plot in R. I remade in tikz to all more flexibility. The original plan was to have the items listed in the boxes in the center of the plot, but they would have looked squished, or required a full page.
+\begin{comment}
+\begin{figure}[ht!]
+\caption{The bi-factor plot for the identity resilience scale.}
+\label{fig:bifacID}
+<<bifacID,echo=FALSE,out.height="4.5in",fig.align="center",fig.height=4.5,fig.width=6,fig.out="6in">>=
+plot(dd)
+@
+\end{figure}
+\end{comment}
+
+\begin{figure}[ht!] \caption{The bi-factor plot for the identity resilience scale.} \label{fig:bifacIDb}
+\centering
+\begin{tikzpicture}[scale=1]
+  \node(phantom1)at (0,9.5) {\phantom{1}};
+  \node[scale=1.0,draw,ellipse,align=center] (id) at (7,4.5) {Identity\\resilience};
+  \node[scale=1.0,draw,ellipse,align=center] (ids) at (-3,8.25) {Self esteem};
+  \node[scale=1.0,draw,ellipse,align=center] (idf) at (-3,5.75) {Efficacy};
+  \node[scale=1.0,draw,ellipse,align=center] (idd) at (-3,3.25) {Distinctiveness};
+  \node[scale=1.0,draw,ellipse,align=center] (idc) at (-3,.75) {Continuity};
+  \node[scale=.9,draw,rectangle,align=center,right] (v1) at (1.2,9) {item\phantom{1} 1};
+  \node[scale=.9,draw,rectangle,align=center,right] (v2) at (1.2,8.5) {item\phantom{1} 2};
+  \node[scale=.9,draw,rectangle,align=center,right] (v3) at (1.2,8) {item\phantom{1} 3};
+  \node[scale=.9,draw,rectangle,align=center,right] (v4) at (1.2,7.5) {item\phantom{1} 4};
+  \node[scale=.9,draw,rectangle,align=center,right] (v5) at (1.2,6.5) {item\phantom{1} 5};
+  \node[scale=.9,draw,rectangle,align=center,right] (v6) at (1.2,6) {item\phantom{1} 6};
+  \node[scale=.9,draw,rectangle,align=center,right] (v7) at (1.2,5.5) {item\phantom{1} 7};
+  \node[scale=.9,draw,rectangle,align=center,right] (v8) at (1.2,5) {item\phantom{1} 8};
+  \node[scale=.9,draw,rectangle,align=center,right] (v9) at (1.2,4) {item\phantom{1} 9};
+  \node[scale=.9,draw,rectangle,align=center,right] (v10) at (1.2,3.5) {item 10};
+  \node[scale=.9,draw,rectangle,align=center,right] (v11) at (1.2,3) {item 11};
+  \node[scale=.9,draw,rectangle,align=center,right] (v12) at (1.2,2.5) {item 12};
+  \node[scale=.9,draw,rectangle,align=center,right] (v13) at (1.2,1.5) {item 13};
+  \node[scale=.9,draw,rectangle,align=center,right] (v14) at (1.2,1) {item 14};
+  \node[scale=.9,draw,rectangle,align=center,right] (v15) at (1.2,.5) {item 15};
+  \node[scale=.9,draw,rectangle,align=center,right] (v16) at (1.2,0) {item 16};
+
+
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](id) -- (v1.east);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](id) -- (v2.east);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](id) -- (v3.east);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](id) -- (v4.east);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](id) -- (v5.east);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](id) -- (v6.east);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](id) -- (v7.east);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](id) -- (v8.east);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](id) -- (v9.east);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](id) -- (v10.east);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](id) -- (v11.east);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](id) -- (v12.east);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](id) -- (v13.east);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](id) -- (v14.east);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](id) -- (v15.east);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](id) -- (v16.east);
+
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](ids) -- (v1.west);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](ids) -- (v2.west);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](ids) -- (v3.west);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](ids) -- (v4.west);
+
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](idf) -- (v5.west);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](idf) -- (v6.west);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](idf) -- (v7.west);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](idf) -- (v8.west);
+
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](idd) -- (v9.west);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](idd) -- (v10.west);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](idd) -- (v11.west);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](idd) -- (v12.west);
+
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](idc) -- (v13.west);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](idc) -- (v14.west);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](idc) -- (v15.west);
+  \draw[shorten >=0.075cm,shorten <=.0cm,->](idc) -- (v16.west);
+
+\end{tikzpicture}
+\end{figure}
+
+
+\subsection{Cronbach's $\alpha$ and alternatives}
+
+<<echo=FALSE>>=
+TS <- factanal(TrustSci,1,scores="Bartlett")$scores
+SS <- factanal(SocSup,1,scores="Bartlett")$scores
+CP <- factanal(CovPrev,1,scores="Bartlett")$scores
+IDx <- factanal(IDRes,1,scores="Bartlett")$scores
+ID <- lavPredict(bifacID)[,1]
+IDse <- lavPredict(bifacID)[,2]
+IDef <- lavPredict(bifacID)[,3]
+IDdi <- lavPredict(bifacID)[,4]
+IDco <- lavPredict(bifacID)[,5]
+constructs <- cbind(TS=TS,SS=SS,CP=CP,ID=ID,IDse=IDse,IDef=IDef,IDdi=IDdi,IDco=IDco)
+c1 <- sub("0.",".",sprintf("%0.3f",cor(TS,rowMeans(TrustSci))))
+c2 <- sub("0.",".",sprintf("%0.3f",cor(SS,rowMeans(SocSup))))
+c3 <- sub("0.",".",sprintf("%0.3f",cor(CP,rowMeans(CovPrev))))
+c4 <- sub("0.",".",sprintf("%0.3f",cor(ID,rowMeans(IDRes))))
+c5 <- sub("0.",".",sprintf("%0.3f",cor(IDx,rowMeans(IDRes))))
+@
+
+
+A popular statistic is called Cronbach's $\alpha$ \citep{Cronbach1951}, though it was introduced prior to this as Guttman's $\lambda_3$ \citep{Guttman1945}. While often used, it is also often misinterpreted and inappropriately applied \citet{McNeish2018}. It assumes that there is only a single underlying dimension/construction and that the construct influences all the items equally. Psychometricians call this $\tau$ equivalence. It provides an estimate for the lower limit of the reliability of the scale. \citet{HayesCoutts2020} note that McDonald's (\citeyear{McDonald1978}) $\omega$ is more appropriate when $\tau$ equivalence is not meet. Both $\alpha$ and $\omega$ are measures of reliability and are reported in Table~\ref{tab:reliabilities}. Neither of these directly measures the internal consistency of the items. They both increase with the number of items, which is expected for measures of the reliability of the whole scale (i.e., all other things being equal, a test of 50 items is more reliable than one with 5 items). The median correlation of the pairs of items is also reported as is the proportion of variation of the first eigenvalue. Based on these, the scree plot,and the statistics based on the scree, single latent variables were estimated for the Trust in Science construct, the Social Support construct, and the COVID Prevention construct. Further, the overall factor from the bi-factor model shown in Figure~\ref{fig:bifacIDb} was estimated.
+
+The mean of the values for each scale (after reverse coding where appropriate) was found and we correlated these with the constructs that we estimated using these latent variable models. The Trust in Science estimate has $r = \Sexpr{c1}$ with the mean of those responses, Social Support has $r = \Sexpr{c2}$ with its mean, and COVID prevention has $r = \Sexpr{c3}$ with its mean. The overall factor Identity Resilience factor has $r = \Sexpr{c4}$ with its mean. The correlation is lower as the four components account for additional variation (if a single factor is calculated in the same manner as the other it has $r = \Sexpr{c5}$). Thus, if future users of these scales only had a couple of people filling them out and just took the means for their responses, they would measure similar constructs.
+
+
+
+<<echo=FALSE,eval=TRUE,warning=FALSE>>=
+rel <- matrix(nrow=length(scales)+4,ncol=4)
+for (i in 1:length(scales)){
+# print(DIMTESTS(scales[[i]],display=0)$dimtests)  # display default is to print lots
+  rel[i,1] <- cronbach.alpha(scales[[i]],standardized=TRUE)$alpha
+  rel[i,2] <- ci.reliability(scales[[i]],type="omega")$est
+  rel[i,3] <- median(cor(scales[[i]])[lower.tri(cor(scales[[i]]),diag=FALSE)])
+  rel[i,4] <- eigen(cor(scales[[i]]))$values[1]/ncol(scales[[i]])
+  }
+
+#the four ID components
+for (i in 0:3){
+  rel[(length(scales)+1+i),1] <-  cronbach.alpha(IDRes[,i*4+(1:4)],standardized=TRUE)$alpha
+  rel[(length(scales)+1+i),2] <-  ci.reliability(IDRes[,i*4+(1:4)],type="omega")$est
+  rel[(length(scales)+1+i),3] <-  
+      median(cor(IDRes[,i*4+(1:4)])[lower.tri(cor(IDRes[,i*4+(1:4)]),diag=FALSE)])
+  rel[(length(scales)+1+i),4] <- eigen(cor(IDRes[,i*4+(1:4)]))$values[1]/ncol(IDRes[,i*4+(1:4)])
+}
+
+@
+
+<<results='asis',echo=TRUE,echo=FALSE>>=
+rel <- matrix(sprintf("%0.3f",rel),ncol=4)
+rel[,1] <- sub("0.",".",rel[,1])  # for APA remove lead 0s
+rel[,2] <- sub("0.",".",rel[,2])  # none of these can go above 1
+rel[,3] <- sub("0.",".",rel[,3])
+rel[,4] <- sub("0.",".",rel[,4])
+rownames(rel) <- c("Trust in Science","Social Support","COVID Prevention",
+                   "Identity Resilience","Trust in Authorities","Trust in Information Sources",
+                   "Components of IR \\hspace{1cm} Self esteem","Efficacy",
+                   "Distinctiveness","Continuity")
+rel <- rel[c(1,2,3,5,6,4,7,8,9,10),]
+colnames(rel) <- c("$\\alpha$","$\\omega$","median r","$\\lambda_1 / k$")
+print(xtable(rel,caption="Measures for the different scales and the four components of the Idenity Resilience scale. The measures are Cronbach's $\\alpha$, McDonald's $\\omega$, the median correlation, and the proportion of the total variation accounted for by the first eigenvalue ($\\lambda_1 / k$). \\vspace{.5cm}",label="tab:reliabilities"),hline.after=c(-1,0,6,nrow(rel)),
+      sanitize.colnames.function=identity,sanitize.rownames.function=identity,
+      caption.placement="top",align="lcccc")
+@
+
+
+\subsection{A Clustered Items Conceptualization}
+
+The assumption in Figure~\ref{fig:singlelatwqs} is that information flows from the latent variable to the individual items, and not directly between the individual items. This may be an adequate approximation for the \emph{Trust in Science} scale, but is unlikely to be for two of the other scales. Consider two sets of questions that we asked our respondents in Table~\ref{tab:trustauthorities}. When deciding useful models for survey items you are modelling how you think respondents are answering the questions so it is wise to have a cognitive model of the respondent \citep{BelliEA2007,LoftusEA1985}.
+
+Here, it is assumed that in the UK and US respondents are aware that both accurate and inaccurate information is present and that authorities/sources vary by their accuracy. In fact, most will realize that our goal in asking this set of items is to estimate which they believe are the most and least trusted. Respondents likely will believe their task is to compare the different sources. This implies a more complex model than that shown in Figure~\ref{fig:singlelatwqs} is likely necessary, and the scree plots (Figure~\ref{fig:scree}) showed simple uni-dimensional models did not fit the responses well. For the authorities, respondents will likely categorize the politicians together, the medical professionals together, the scientists and academics together (within the context of a COVID-19 survey most of the academics expressing opinions in the media have been scientists), and we are unsure where journalists will fit within most respondents' minds. It is worth stating an additional assumption. I am aware, for example, that most people will trust \emph{some} politicians and distrust \emph{some} politicians, and similarly for the other groups. I am assuming that respondents are answering with respect to some prototypical politician or scientist or medical professional or journalist. As for the sources of information, it is likely the the NHS/CDC (the former was used in the UK survey, the later in the US survey) and health profession websites are likely to be classified together and with the medical professionals. 
+
+\begin{table}[ht!] \caption{Items for the Trust in Authorities and Trust in Information Sources scales. \vspace{.5cm}} \label{tab:trustauthorities}
+\footnotesize
+\centering
+\begin{tabular}{p{5.8cm}p{7.8cm}}
+Trust in  Authorities & Trust in Information Sources  \\ \hline
+\small{Here is a list of different professional groups. For each please indicate how much you generally trust them to tell the truth.} &  \small{How much do you trust each of these sources?} \\
+(1=not at all, 5=very much) &  (1=not at all, 7=completely)\\ \hline
+Doctors & WhatsApp \\
+ 	Nurses & Blogs \\
+ 	National politicians & Social networking sites (e.g., Facebook, Twitter) \\
+	Local politicians & Professional health information websites (e.g., WebMD) \\
+	University academics & The NHS (or CDC for US sample) Website \\
+ 	Journalists & \\
+ 	Scientists & \\ \hline
+\end{tabular}
+\end{table}
+
+There are many statistical methods that place people and/or variables into clusters. Many of these are popular in the relatively new branch of statistics called machine learning. Here two older approaches are used to illustrate methods of placing the twelve different variables into clusters.  
+
+\subsection{Conducting Cluster Analysis}
+
+Cluster analysis is described in multivariate statistics textbooks including \citet[see Ch.~2][as well as numerous other multivariate statistics textbooks]{BartholomewEA2002}. There are two main types of cluster analysis: hierarchical and non-hierarchical. With hierarchical analysis a distance matrix between each pair of items is entered into the program and a tree-like structure is returned that branches between dissimilar items and keeps similar items together. With non-hierarchical cluster analysis the analyst tells the computer how many clusters to have. Usually this choice is informed by comparing the fit of models with different numbers of clusters. \citeauthor{BartholomewEA2002} offer two important bits of advice: 
+
+
+\begin{enumerate}[noitemsep]
+\item
+``we shall recommend that several different methods should be used, since well-defined clusters are likely to show up using any reasonable method'' (p.~22).
+\item ``the usefulness of the method is to be judged by what it produces rather than by the assumptions made along the way'' (p.~22).
+\end{enumerate}
+
+\noindent Both hierarchical and non-hierarchical approaches will be shown here.
+
+We will combine responses for the Trust in Authorities and Trust in Sources of information scales. As the first set was based on a 1--5 scale and the second a 1--7 scale, we standardized these by dividing by each variable's standard deviation. The Euclidean distance between each pair of the 13 items is calculated and this is entered into \textsf{R}'s hierarchical clustering function \texttt{hclust}. Euclidean distance is generally used unless there is a specific reason to use an alternative. Cluster analysis can be used to categorise the variables or the respondents. Both can be useful. Here it is used to categorise the variables. 
+
+<<echo=FALSE>>=
+TrustThings <- cbind(TrustAuth,Trust_Info)
+colnames(TrustThings) <- sub("Trust_Auth_","",colnames(TrustThings))
+colnames(TrustThings) <- sub("Trust_Info_","",colnames(TrustThings))
+TrustX <- sweep(TrustThings,2,apply(TrustThings,2,sd),FUN="/")
+hc <- hclust(dist(t(TrustX)),method="complete")
+@
+
+The main plot from a hierarchical cluster analysis, called a dendrogram, is shown in Figure~\ref{fig:dendrotrust}. It is made here using the \texttt{plot\_horiz.dendrogram} from the \textsf{R} package \textbf{dendextend} \citep{dendextend}. This shows the politicians and journalists are clustered together, as are many of the social media websites. Scientists, academic, and professional medical sites are clustered together. The medical professions (doctors and nurses) comprise a cluster. The correlations between the means for the standardized values for these clusters and the Trust in Science estimated latent variable from above are printed in this Figure. The correlation between Trust in Science and the trust in the science cluster is, as expected, high. There is little association between Trust in Science and how much people trust politicians, journalists, or social media.
+
+An important assumption of hierarchical cluster analysis is that each branch is meaningful. This means that ``Support Groups'' can be seen as more similar to ``Blogs'' than to ``Whats App,'' even though these are clustered together to conduct the correlations with Trust in Science. 
+
+<<echo=FALSE>>=
+docnurse <- rowMeans(TrustX[,1:2])
+politjourn <- rowMeans(TrustX[,c(3,4,6)])
+socmedia <- rowMeans(TrustX[,8:11])
+science <- rowMeans(TrustX[,c(5,7,12,13)])
+rs <- sub("0.",".",sprintf("%0.3f",cor(TS,cbind(docnurse,politjourn,socmedia,science))))
+@
+
+\begin{figure}[ht!]
+\caption{Dendrogram of the trust in authorities and sources items.}
+\label{fig:dendrotrust}
+<<dendro1,echo=FALSE,out.height="3in",fig.align="center",fig.height=1.5*3,fig.width=1.5*6,fig.out="6in">>=
+par(mar=c(2,8,2,0))
+plot_horiz.dendrogram(hc)
+text(60.5,12.3,paste0("r = ",rs[2]))
+text(60.8,7.4,paste0("r = ",rs[3]))
+text(45,1,paste0("r = ",rs[1]))
+text(61,5,paste0("r = ",rs[4]))
+@
+\end{figure}
+
+
+For non-hierarchical cluster analysis the analyst determines how many clusters to place the variables into. This could be based on some theory about how people are likely to respond or by examining how well cluster analysis works with different numbers of clusters. One approach is to try several numbers of clusters and measure how much variation there is within the clusters. If the variables in the same cluster are all really similar, the variation should be small, but if they are different there should be much variation. One approach uses the \emph{gap statistic} \citep{TibshiraniEA2001}. Let the within cluster sum of squares variation be denoted $W_k$ for the method with $k$th clusters. The gap statistic is $\mathit{Gap_k} = E(ln(W_k)) - ln(W_k)$, where $E(ln(W_k))$ is the expected values for random data. This is much like the parallel analysis used with the scree plot described earlier. As with that, the expected value for random data can be calculated several times. This is shown by the error bars in Figure~\ref{fig:gap}. As with the scree, choosing the appropriate number of clusters is part an art but several methods have been devised to assist the analyst in making the choice. The \texttt{clusGap} function from the \textsf{R} package \textbf{cluster} \citep{cluster} calculates the gap statistic and its standard error for different numbers of clusters. The \texttt{maxSE} function uses this and finds the ``best'' of these using six different methods, but as with choosing dimensions from a scree plot the analyst should carefully examine the gap plot and the resulting clusters of variables to see what makes sense. The results from THE six methods were: one suggested a single cluster, one suggested nine clusters, and the remaining four suggested four clusters. I will use four clusters. These are: 
+
+
+\begin{enumerate}[noitemsep]
+\item National politicians, Local politicians, Journalists
+\item Blogs, Support groups, Social networks
+\item WhatsApp
+\item Doctors, Nurses, University academics, Scientists, Profession health sites, NHS/CDC website
+\end{enumerate}
+
+\noindent This is slightly different from the four clusters identified in Figure~\ref{fig:dendrotrust}. Trust in ``WhatsApp'' is separated into its own cluster and all the medical and science related sources are placed together. It is important to recognise that the different statistical procedures will often give different answers. There is seldom a single ``correct'' method for analysing data. The choices the analysts make may affect the answers. 
+
+<<echo=FALSE>>=
+opts_chunk$set(cache.path = paste0(folder,"cache"))
+@
+<<gapstat,cache=TRUE,echo=FALSE>>=
+set.seed(3232)
+clusK <- clusGap(t(TrustThings),FUN=kmeans,K.max=10,B=1000) #change to 1000//
+@
+
+\begin{figure}[ht!]
+\caption{Gap plot for the trust in authorities and sources. The choice for the number of clusters is to have a few as possible while still having the gap statistic being fairly large. Most of the gap statistic measures suggest four clusters.}
+\label{fig:gap}
+<<gap,echo=FALSE,out.height="4in",fig.align="center",fig.height=4,fig.width=5,fig.out="5in">>=
+plot(clusK,ylim=c(-.25,.25),main="",las=1,xlab="Number of clusters (k)")
+points(1:10,clusK$Tab[,3],pch=21,bg="white")
+@
+\end{figure}
+
+<<echo=FALSE,eval=FALSE>>=
+with(clusK, maxSE(Tab[,"gap"], Tab[,"SE.sim"], method="firstSEmax"))
+maxSE(clusK$Tab[, "gap"], clusK$Tab[, "SE.sim"], method="Tibs2001SEmax")
+maxSE(clusK$Tab[, "gap"], clusK$Tab[, "SE.sim"], method="globalSEmax")
+maxSE(clusK$Tab[, "gap"], clusK$Tab[, "SE.sim"], method="firstmax")
+maxSE(clusK$Tab[, "gap"], clusK$Tab[, "SE.sim"], method="globalmax")
+@
+
+<<eval=FALSE,echo=FALSE>>=
+kmeans(t(TrustThings),centers=2)$cluster
+kmeans(t(TrustThings),centers=3)$cluster
+(k4 <- kmeans(t(TrustThings),centers=4)$cluster)
+@
+
+\begin{description}[noitemsep]
+\item{\underline{Continous constructs}.} I assumed that the Identity Resilience items, the Social Support items, the Trust in Science items, and the COVID Prevention items, can be thought of as measuring multiple dimensions. 
+\item{\underline{Dimensionality}.} I assumed four factors underlie the Identity Resilience items and a bi-factor model with four additional components fit the data well. The Social Support, Trust in Science, and COVID Prevention items all were consistent with single constructs, as predicted from the papers introducing these scaled. 
+\item{\underline{Trust in Authorities/Sources}.} Single item construct models did not fit well for the Trust in Authorities and the Trust in Sources of Information items. Cluster analysis was used for these and discussed.
+\end{description}
+
+
+
+\subsection{Comparing Scales by Countries}
+
+<<echo=FALSE>>=
+apap <- function(x){
+  p <- sub("0.",".",sprintf("%0.3f",x))
+  if (x < .0005) p <- "< .001"
+  return(p)}  
+# mean, ci, t df p delta
+vals <- matrix(nrow=ncol(constructs)*2,ncol=7)
+vps <- vector(length=ncol(constructs))
+cium <- function(x1,x2) paste0("(",x1,", ",x2,")")
+for (i in 1:ncol(constructs)){
+  tt <- t.test(constructs[,i]~p3$UK_or_US,var.equal=TRUE)
+  ciUK <- t.test(constructs[p3$UK_or_US==1,i])
+  ciUS <- t.test(constructs[p3$UK_or_US==2,i])
+  vals[2*(i-1)+1,1] <- sprintf("%0.3f",ciUK$estimate)
+  vals[2*(i-1)+2,1] <- cium(sprintf("%0.3f",ciUK$conf.int)[1],sprintf("%0.3f",ciUK$conf.int)[2])
+  vals[2*(i-1)+1,2] <- sprintf("%0.3f",ciUS$estimate)
+  vals[2*(i-1)+2,2] <- cium(sprintf("%0.3f",ciUS$conf.int)[1],sprintf("%0.3f",ciUS$conf.int)[2])
+  vals[2*(i-1)+1,3] <- sprintf("%0.3f",abs(tt$statistic))
+  vals[2*(i-1)+1,4] <- prettyNum(tt$parameter,big.mark=",")
+  vals[2*(i-1)+1,5] <- apap(tt$p.value)
+  vps[i] <- tt$p.value
+  ds <- cohen.d(constructs[,i],p3$UK_or_US)$cohen.d
+  vals[2*(i-1)+1,7] <- sprintf("%0.3f",ds[1,c(2)]) 
+  vals[2*(i-1)+2,7] <- cium(sprintf("%0.3f",ds[1,1]),sprintf("%0.3f",ds[1,3])) 
+}
+for (x in 1:ncol(constructs))
+  vals[2*(x-1)+1,6] <- apap(p.adjust(vps)[x])
+rownames(vals)[seq(2,(2*ncol(constructs)),2)] <- rep("CI",ncol(constructs))
+rownames(vals)[seq(1,(2*ncol(constructs)-1),2)] <- 
+    c("Trust in Science","Social Support","COVID Prevention",
+     "Identity Resilience","Self esteem","Efficacy",
+     "Distinctiveness","Continuity")
+vals <- data.frame(row=rownames(vals),vals)
+colnames(vals) <- c("","$\\overline{x}_\\mathit{UK}$",
+                     "$\\overline{x}_\\mathit{US}$",
+                     "$t$","$df$","$p$","$p_\\mathit{adj}$","Cohen's $d$")
+@
+
+Table~\ref{tab:meansbyUKUS} shows the means, their 95\% confidence intervals, a $t$ test comparing these, and a common effect size for this comparison called Cohen's $d$. This is the difference in means divided by the standard deviation. The $p$-values for the individual tests are printed as well as those after adjusting using Holm's method. This is used because having eight $t$-tests means the probability of getting a significant result (i.e., $p < .05$) on at least one of these, even if there are no differences in the population, is much higher than 5\% \citep{BretzEA2010}. An alternative way to consider these differences is looking at the effect sizes. \citet{Cohen1992} describes $d = .20$ as a small effect ($d = .50$ as medium, and $d = .80$ as large). From this the effects for Trust in Science, COVID prevention, and Distinctiveness are all, using his terminology, ``small'' effects, and the others do not reach this level. Respondents in the US trust science more, have higher scores on COVID prevention, and view themselves as more distinctive. It is important to stress that the labels Cohen uses are arbitrary, which he emphasizes, but also argues for their applicability in social science research:
+
+\begin{quote}
+Although arbitrary, the proposed conventions will be found to be reasonable by reasonable people. \dots . Many effects sought in personality, social, and clinical-psychological research are likely to be small effects as here defined, both because of the attenuation in validity of the measures employed and the subtlety of the issues frequently involved. \\ \phantom{l} \hfill \citet[p.~13]{Cohen1988} 
+\end{quote}
+
+There are several assumptions of these $t$-tests including that the within-group population distributions are normally distributed and with equal variances. These assumptions will never be correct: researchers should ``move from [the idea that] all assumptions are right towards all assumptions are wrong'' \citep[p.~72]{Tukey1986}. This does not mean that they should be ignored, but that even with relatively small deviations the results will likely still enable wise decision making. Another assumption is that the group variable is measured without error. This should not be an issue for these comparisons as people should accurately know which country they are in, but we bring it up here as it is an issue with some later statistical procedures.  
+
+<<tab:meansbyUKUS,results='asis',echo=FALSE>>=
+print(xtable(vals,caption="Comparing the means for the UK and US. 
+      Student $t$-tests with their associated $p$-values 
+      (without and with Holm's adjustment for the number of tests) 
+      are shown with Cohen's $d$. 95\\% Confidence intervals (CI) 
+      are shown below the means and $d$.\\vspace{.5cm}",label="tab:meansbyUKUS"),
+      sanitize.colnames.function=identity,
+      caption.placement="top",size="footnotesize",include.rownames=FALSE,
+      hline.after=c(-1,0,8,nrow(vals)))
+@
+
+Table~\ref{tab:corrsconstructs} shows the correlations among all the constructs. Cohen's (\citeyear{Cohen1992}) labels for correlations are: $r = .10$ as small, $r = .30$ as medium, and $r = .50$ as large. Using this terminology the association between Social Support and Identity Resilience is large, between Trust in Science and COVID Prevention is medium, and some of the components of Identity Resilience have small associations with the other constructs. It is worth noting that a scatterplot matrix of these should also be examined to search for outliers and non-linearity. It is not printed here as no issues were found. When discussing $t$-tests I mentioned the assumption that the grouping variable is assumed to be measured without error. Here, the correlation is interpreted as how closely associated the two variables created using factor analysis are. But, these variables are just estimates of the constructs and have error associated with them. The correlations between the true constructs are likely to be higher that those between their estimates. There are ways to estimate the correlations between the actual constructs and not just their estimate. Structural equation modelling (SEM) is one way and this approach is used in the next section.
+
+<<tab:corrsconstructs,echo=FALSE,results='asis'>>=
+xtab <- cor(constructs)
+xtab <- matrix(sub("0.",".",sprintf("%0.3f",xtab)),nrow=nrow(xtab))
+xtab[upper.tri(xtab,diag=TRUE)] <- NA
+rownames(xtab) <- c("Trust in Science","Social Support","COVID Prevention",
+                   "Identity Resilience","Self esteem","Efficacy",
+                   "Distinctiveness","Continuity")
+colnames(xtab) <- c("TSci","SucSup","COVID","IdRel","SEst","Effic","Dist","Cont")
+print(xtable(xtab,caption="Pearson correlations between the constructs, includes the four components of the Identity Resilience Index. \\vspace{.5cm}",label="tab:corrsconstructs"),
+      hline.after=c(-1,0,4,nrow(xtab)),
+      sanitize.colnames.function=identity,caption.placement="top")
+@
+%\end{table}
+
+<<echo=FALSE,eval=FALSE>>=
+library(car)
+spm(constructs[sample(1:nrow(constructs),500),],pch=".")
+@
+
+\subsection{The relationships among these constructs}
+
+A popular procedure in the social sciences is putting forward a causal model for the relationships among variables, seeing how well the data fit the model, and then focusing on the relationships between the pairs of constructs. This is called \emph{path analysis}. A good introduction is \citet{LoehlinBeaujean2017}. One popular approach is called structural equation modelling. This involves simultaneously fitting a model that incorporates both the measurement of the latent constructs and the relations among them. As our interest here is comparing the UK and US, we include effects for country influencing both the individual constructs and proposed relationships constructs, resulting in a complex model. Alternatively, we could run separate models for the UK and US. This would mean how the constructs are created would differ for the countries and therefore the constructs would not be the same. A third approach, sometimes called the two-step approach is \citep[e.g.,][]{AndersonGerbing1988} where the measurement of the constructs occurs in the first step and the relationships among the constructs, or the structural part of the model, in the second. This is also called the \emph{structural after measurement} (SAM) approach. This means that constructs are made in the same way for the two countries. There are other approaches that can be used, but this approach also conceptually matches onto how I have described the problem and that makes it easier to convey to readers. It is important to note that it is not always possible to conceptually separate the measurement and structural parts of the model.
+
+One approach to this two-stage approach would be to estimate the constructs as was done above and use these in a set of regression equations. As discussed with respect to $t$-tests, these would assume that the predictor variables are measured without error. \citet{RosseelLoh2023} describes several problems with this approach but note that it is still popular. Like with the correlations it tends to underestimate the associations among the variables. The alternative is to include the uncertainty in these estimates in the model. \citet{RosseelLoh2023} show the equations for doing this and provide a function \texttt{sam} in newly version of the package \textbf{lavaan} \citep{lavaan} to do this. This is the approach used here. 
+
+The model is simpler than we examine with these data in \citet{JaspalEA2023JoH} when comparing the UK and Portugal. This is largely because of wanting to concentrate on the methodological issues of the approach. The Identity Resilience is treated as a single latent variable from the 16 IR measures. As discussed in \citet{JBA1}, this is assumed to be related to other constructs. Trust in Science should influence COVID-19 Prevention, and given the messaging in the two countries differed we expect that COVID-19 Prevention ratings will still vary by country even beyond Trust in Science. 
+
+
+<<sam1,echo=FALSE>>=
+model1 <- '
+#measurement
+ ID =~ ID_Res_1 + ID_Res_2 + ID_Res_3 + ID_Res_4 + ID_Res_5 + ID_Res_6 + ID_Res_7 + ID_Res_8 + ID_Res_9 + ID_Res_10 + ID_Res_11 + ID_Res_11 + ID_Res_12 + ID_Res_13 + ID_Res_14 + ID_Res_15  + ID_Res_16 
+ TrustScience =~ Trust_Sci_1 + Trust_Sci_2 + Trust_Sci_3 + Trust_Sci_4 + Trust_Sci_5 + Trust_Sci_6 
+ SocSup =~ Soc_Sup_1 + Soc_Sup_2 + Soc_Sup_3 + Soc_Sup_4 + Soc_Sup_5 + Soc_Sup_6 + Soc_Sup_7 + Soc_Sup_8 + Soc_Sup_9 + Soc_Sup_10 + Soc_Sup_11 + Soc_Sup_12
+ CovPrev =~ Cov_Prevent_1 + Cov_Prevent_2 + Cov_Prevent_3 + Cov_Prevent_4 +Cov_Prevent_5 + Cov_Prevent_6 + Cov_Prevent_7 + Cov_Prevent_8 + Cov_Prevent_9 + Cov_Prevent_10
+#regressions
+  SocSup ~ ID 
+  TrustScience ~ ID + UK_or_US
+  CovPrev ~ TrustScience + UK_or_US
+ # residuals
+'
+sam1 <- sam(model1,p3,
+    mm.list=list(id="ID", ts="TrustScience",ss="SocSup",cp="CovPrev"))
+sumsam1 <- summary(sam1)
+
+@
+
+
+<<sam2,echo=FALSE>>=
+model2 <- '
+#measurement
+ ID =~ ID_Res_1 + ID_Res_2 + ID_Res_3 + ID_Res_4 + ID_Res_5 + ID_Res_6 + ID_Res_7 + ID_Res_8 + ID_Res_9 + ID_Res_10 + ID_Res_11 + ID_Res_11 + ID_Res_12 + ID_Res_13 + ID_Res_14 + ID_Res_15  + ID_Res_16 
+ TrustScience =~ Trust_Sci_1 + Trust_Sci_2 + Trust_Sci_3 + Trust_Sci_4 + Trust_Sci_5 + Trust_Sci_6 
+ SocSup =~ Soc_Sup_1 + Soc_Sup_2 + Soc_Sup_3 + Soc_Sup_4 + Soc_Sup_5 + Soc_Sup_6 + Soc_Sup_7 + Soc_Sup_8 + Soc_Sup_9 + Soc_Sup_10 + Soc_Sup_11 + Soc_Sup_12
+ CovPrev =~ Cov_Prevent_1 + Cov_Prevent_2 + Cov_Prevent_3 + Cov_Prevent_4 +Cov_Prevent_5 + Cov_Prevent_6 + Cov_Prevent_7 + Cov_Prevent_8 + Cov_Prevent_9 + Cov_Prevent_10
+#regressions
+  SocSup ~ ID 
+  TrustScience ~ ID + UK_or_US
+  CovPrev ~ TrustScience 
+ # residuals
+'
+sam2 <- sam(model2,p3,
+    mm.list=list(id="ID", ts="TrustScience",ss="SocSup",cp="CovPrev"))
+sumsam2 <- summary(sam2)
+an <- anova(sam1,sam2)
+@
+
+SEM, and more generally using sets of regression models to create path diagrams, is sometimes referred to as causal modeling as if causation can suddenly be determined from the correlations by using fancy statistics. \citet{MorganWinship2015} summed up the consequences of believing the statistical procedures are magic.
+
+\begin{quote}
+Naive usage of regression modeling was blamed for nearly all the ills of sociology, everything from stripping temporality and context from the mainstream, \dots{} the suppression of attention to explanatory mechanisms, \dots{} the denial of causal complexity, \dots{} and the destruction of mathematical sociology. \\ \phantom{k} \hfill \citet[p.~13]{MorganWinship2015} 
+\end{quote}
+
+\noindent \citet{Cartwright2014} describes the situation succinctly as ``no causes in, no causes out.'' I assume Identity Resilience, Social Support, and Trust in Science are related, and that Trust in Science influences COVID preventative behaviours, but our statistical procedures cannot show if the direction of causation is accurate. This is a framework in which to test our hypotheses about country differences. Country is treated as exogeneous, none of these other variables will influence it appreciably (not completely because, for example, someone who really trusts science might feel compelled to move to the UK, but we are willing to assume this possibility represents a small enough movement to ignore). Interest is whether Country influences Trust in Science and whether after accounting for the influence of Trust in Science on COVID behaviours, whether Country further influences COVID behaviours. It does. This can be shown by comparing the model in Figure~\ref{fig:sam1} without the dashed line with the model with the dashed line. The difference in fit is: $\chi^2(1) = \Sexpr{sprintf("%0.2f",diff(an$Chisq))}, p < .001$. This suggests this effect (the dashed arrow of Figure~\ref{fig:sam1}) should be included in the model.
+
+Like the procedure itself, the numeric results from the SAM model are separated into the measurement and structural parts. The measurement part estimates the reliability for each construct. These are (for the model including the dashed line in Figure~\ref{fig:sam1}):
+
+\begin{tabular}{lr}
+Identity Resilience & \Sexpr{sub("0.",".",sprintf("%0.3f",sumsam1$sam$sam.mm.rel[[1]][1]))} \\  
+Trust in Science & \Sexpr{sub("0.",".",sprintf("%0.3f",sumsam1$sam$sam.mm.rel[[1]][2]))} \\  
+Social Support & \Sexpr{sub("0.",".",sprintf("%0.3f",sumsam1$sam$sam.mm.rel[[1]][3]))} \\  
+COVID Prevention & \Sexpr{sub("0.",".",sprintf("%0.3f",sumsam1$sam$sam.mm.rel[[1]][4]))} \\  
+\end{tabular}
+
+\noindent The $\alpha$ values listed in Table~\ref{tab:reliabilities} are often described as lower bounds for the reliability, so it is worth noting where that these values are all higher.
+
+Statistics related to the structural aspects of the model are shown in Table~\ref{tab:sam1coef}. The largest effects are for the Identity Resilience to Social Support path and the Trust in Science to COVID Prevention path. Identifying these is of applied importance. In particular, the path between Trust in Science and preventative behaviours suggests increasing trust in science may improve behaviours that in turn may lessen the impact of pandemics. 
+
+
+\begin{table} \caption{The path coefficients and related statistics for the model shown in Figure~\ref{fig:sam1}.} \label{tab:sam1coef}
+\centering
+\vspace{.5cm}
+\begin{tabular}{l rrrr}
+Path & coef & $se$ & $z$ & $p$ \\ \hline
+Identity Resilience $\rightarrow$ Social Support & 
+\Sexpr{sprintf("%0.3f",sumsam1$pe$est[1])} & \Sexpr{sprintf("%0.3f",sumsam1$pe$se[1])} &  
+\Sexpr{sprintf("%0.3f",sumsam1$pe$z[1])} & \Sexpr{apap(sumsam1$pe$pvalue[1])} \\
+Identity Resilience $\rightarrow$ Trust in Science & 
+\Sexpr{sprintf("%0.3f",sumsam1$pe$est[2])} & \Sexpr{sprintf("%0.3f",sumsam1$pe$se[2])} &  
+\Sexpr{sprintf("%0.3f",sumsam1$pe$z[2])} & \Sexpr{apap(sumsam1$pe$pvalue[2])} \\
+Country $\rightarrow$ Trust in Science & 
+\Sexpr{sprintf("%0.3f",sumsam1$pe$est[3])} & \Sexpr{sprintf("%0.3f",sumsam1$pe$se[3])} &  
+\Sexpr{sprintf("%0.3f",sumsam1$pe$z[3])} & \Sexpr{apap(sumsam1$pe$pvalue[3])} \\
+Trust in Science $\rightarrow$ COVID Prevention & 
+\Sexpr{sprintf("%0.3f",sumsam1$pe$est[4])} & \Sexpr{sprintf("%0.3f",sumsam1$pe$se[4])} &  
+\Sexpr{sprintf("%0.3f",sumsam1$pe$z[4])} & \Sexpr{apap(sumsam1$pe$pvalue[4])} \\
+Country $\rightarrow$ COVID Prevention & 
+\Sexpr{sprintf("%0.3f",sumsam1$pe$est[5])} & \Sexpr{sprintf("%0.3f",sumsam1$pe$se[5])} &  
+\Sexpr{sprintf("%0.3f",sumsam1$pe$z[5])} & \Sexpr{apap(sumsam1$pe$pvalue[5])} \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{comment}  % kept since this may be more useful for talk
+\begin{figure}[ht!] \caption{A structure after measurement (SAM) model \citep{RosseelLoh2023} of the relationships among COVID related constructs. The observed variables that make up the constructs and their error terms are not shown.} \label{fig:samOld}
+\centering
+\begin{tikzpicture}[scale=1]
+  \node(phantom1)at (0,4.5) {\phantom{1}};
+  \node[scale=1.0,draw,ellipse,align=center] (IR) at (0,2.5) {Identity\\Resilience};
+  \node[scale=1.0,draw,ellipse,align=center] (SS) at (4,4) {Social\\Support};
+  \node[scale=1.0,draw,ellipse,align=center] (TS) at (3,1) {Trust\\Science};
+  \node[scale=1.0,draw,ellipse,align=center] (CP) at (8,2.5) {COVID\\Prevention};
+  \node[scale=1.0,draw,rectangle,align=center] (Count) at (6.5,.0) {Country};
+
+    \draw[shorten >=0.075cm,shorten <=.0cm,->](IR) -- (SS);
+    \draw[shorten >=0.075cm,shorten <=.0cm,->](IR) -- (TS);
+    \draw[shorten >=0.075cm,shorten <=.0cm,->](TS) -- (CP);
+    \draw[shorten >=0.075cm,shorten <=.0cm,dashed,->](Count.north east) -- (CP);
+    \draw[shorten >=0.075cm,shorten <=.0cm,->](Count.north west) -- (TS);
+\end{tikzpicture}
+\end{figure}
+\end{comment}
+
+\begin{figure}[ht!] \caption{A structure after measurement (SAM) model \citep{RosseelLoh2023} of the relationships among COVID-19 related constructs. The observed variables that make up the constructs and their error terms are not shown. The dashed rectangle encloses the structural part of the model. The measurement is shown by the paths between the constructs inside the rectangle and the items outside it. Each of the observed items, other than Country, also has an implied error term associated with it, but these are not shown as the figure already is fairly complex. The coefficients for this model are shown in Table~\ref{tab:sam1coef}} \label{fig:sam1}
+\centering
+\begin{tikzpicture}[scale=1]
+  \node(phantom1) at (0,6) {\phantom{1}};
+  \node[scale=1.0,draw,ellipse,align=center] (IR) at (0,2.5) {Identity\\Resilience};
+  \node[scale=1.0,draw,ellipse,align=center] (SS) at (4,4) {Social\\Support};
+  \node[scale=1.0,draw,ellipse,align=center] (TS) at (3,.5) {Trust\\Science};
+  \node[scale=1.0,draw,ellipse,align=center] (CP) at (8,2.5) {COVID\\Prevention};
+  \node[scale=1.0,draw,rectangle,align=center] (Count) at (6.5,.0) {Country};
+  \node[draw,dashed,fit=(IR) (SS) (TS) (CP) (Count)] {};
+  
+  \node[scale=.8,draw,rectangle,align=center] (ir1) at (-2.8,3) {IR1};
+  \node[scale=.8,align=center] (ird) at (-2.82,2.6) {$\vdots$};
+  \node[scale=.8,draw,rectangle,align=center] (ir16) at (-2.84,2) {IR16};
+
+  \node[scale=.8,draw,rectangle,align=center] (cp1) at (10.9,3) {CP1};
+  \node[scale=.8,align=center] (cpd) at (10.92,2.6) {$\vdots$};
+  \node[scale=.8,draw,rectangle,align=center] (cp10) at (10.94,2) {CP10};
+
+  \node[scale=.8,draw,rectangle,align=center] (ts1) at (2.2,-1.2) {TS1};
+  \node[scale=.8,align=center] (tsd) at (3,-1.2) {$\cdots$};
+  \node[scale=.8,draw,rectangle,align=center] (ts6) at (3.8,-1.2) {TS6};
+
+  \node[scale=.8,draw,rectangle,align=center] (ss1) at (3.3,5.7) {SS1};
+  \node[scale=.8,align=center] (ssd) at (4,5.7) {$\cdots$};
+  \node[scale=.8,draw,rectangle,align=center] (ss12) at (4.75,5.7) {SS12};
+
+    \draw[shorten >=0.075cm,shorten <=.0cm,->](IR) -- (ir1);
+    \draw[shorten >=0.075cm,shorten <=.0cm,->](IR) -- (ir16);
+    \draw[shorten >=0.075cm,shorten <=.0cm,->](SS) -- (ss1);
+    \draw[shorten >=0.075cm,shorten <=.0cm,->](SS) -- (ss12);
+    \draw[shorten >=0.075cm,shorten <=.0cm,->](TS) -- (ts1);
+    \draw[shorten >=0.075cm,shorten <=.0cm,->](TS) -- (ts6);
+    \draw[shorten >=0.075cm,shorten <=.0cm,->](CP) -- (cp1);
+    \draw[shorten >=0.075cm,shorten <=.0cm,->](CP) -- (cp10);
+
+
+    \draw[shorten >=0.075cm,shorten <=.0cm,->](IR) -- (SS);
+    \draw[shorten >=0.075cm,shorten <=.0cm,->](IR) -- (TS);
+    \draw[shorten >=0.075cm,shorten <=.0cm,->](TS) -- (CP);
+    \draw[shorten >=0.075cm,shorten <=.0cm,dashed,->](Count.north east) -- (CP);
+    \draw[shorten >=0.075cm,shorten <=.0cm,->](Count.west) -- (TS);
+\end{tikzpicture}
+\end{figure}
+
+\section{Conclusion/Summary}
+
+Considerations and assumptions are part of all research, even when not evident in the descriptions of the research in scientific journals. The aim of this paper, like Toto, is to pull back the curtain that obscures the truth, but unlike the Wizard of Oz (in the film) I want you to ``pay attention to those considerations and assumptions behind the curtain [of scientific protocols].'' Word limits, masked review, and years of training have led gathering of social scientists to report the main findings from research in a succinct and formal manner that hides the decisions made when conducting the research. The format of journals and the 15-minute conference slots make this inevitable and we do not believe the approach used here is appropriate for all dissemination. For this special issue, focused on several of our research ideas and with a broad audience, it is worth describing our considerations and assumptions in more detail. Further, reflecting on these helps to focus on these decisions and forced me to be explicit why certain choices were made. Doing this had therapeutic value for me.  
+
+We created a research team and developed research questions in response to a call from the British Academy. Our aim was to explore different aspects of identity process theory (IPT) in the UK and US with focus on different ethnicities withing the context of COVID-19. We focus on IPT in the first paper in this issue and ethnic differences in the third. Our main method, for much of our research, is to present a set of scales to people and make conclusions about how humans think and behave based on the associations among all of their responses. This is a tall order and requires both assumptions and some empirical checks of \emph{some of} these assumptions. We assume that the sample achieved online through Prolific will be similar enough to others to provide useful and meaningful results. We assume that their responses inform us about their beliefs and behaviours consistent with our intent. We assume these can be aggregated and represent the intended psychological constructs. The choice of statistical methods for this aggregation and for looking at the associations among the constructs also require decisions. In the typical article, the authors focus more on \emph{what} they did rather than \emph{why} they did what they did, and \emph{why} they didn't do the alternatives. 
+
+
+\subsubsection{What did we find?}
+\begin{itemize}[noitemsep]
+\item[--] The items for Trust in Science, Social Support, and COVID Prevention could all be represented well with single constructs.
+\item[--] The Identity Resilience Index was best fit by four components and an overall Identity Resilience construct.
+\item[--] The Trust in different Authorities and Sources of Information scales could not be summarized well by single measures. The different authorities and sources of information could be categorized depending on if they were from politicians, social media, scientists, or the medical profession.
+\item[--] The ``structure after measurement'' model shows Identity Resilience influencing Social Support and Trust in Science, and Trust in Science influencing COVID Prevention behaviours. Country was related to Trust in Science (US trusting more) and COVID Prevention (US reporting more of these behaviours). 
+\end{itemize}
+
+We believe that social science theory and methods can help inform policy and other applications related to societally important issues. The COVID-19 pandemic is an example. While medical and economic research are vital for pandemics, so is understanding how people will psychologically react to health guidance and restrictions. Social scientists have many tools at their disposal. When faced with global crisis the research tools from many disciplines can be useful. Each discipline has tacit protocols. Being explicit about the protocols helps readers to better understand the approaches and the research implications.
+
+
+\bibliography{../AllRefs}
+%\bibliography{../temp}
+
+\end{document}
